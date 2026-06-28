@@ -1,53 +1,54 @@
+# Docker
+.docker
+docker-compose.yml
+
 # GitHub
 .github
 
-# IDE
-.vscode
-.idea
+# Git
+.gitattributes
+.gitignore
+.distignore
 
-# Docker
-.docker
-Dockerfile
-docker-compose.yml
+# Editor config
+.editorconfig
 
 # Environment
 .env
 
-# Git
-.gitignore
-.distignore
+# Node
+node_modules
+package-lock.json
+package.json
 
-# Testing
+# Documentation (GitHub-only)
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+CONTRIBUTORS.md
+SECURITY.md
+LICENSE
+README.md
+
+# Theme repo-only files
+SCREENSHOT-INSTRUCTIONS.txt
+
+# Testing / Linting
 tests
 phpunit.xml.dist
+phpcs.xml
+phpcs.xml.dist
+phpstan.neon
+phpstan.neon.dist
+.eslintrc
+.prettierrc
+.stylelintrc
 
 # OS Files
 .DS_Store
 Thumbs.db
 
-# Logs
+# Logs / Dumps
 *.log
-
-# Node
-node_modules
-composer.lock
-package-lock.json
-vendor/bin
-.editorconfig
-.eslintrc
-.prettierrc
-.stylelintrc
-phpcs.xml
-phpcs.xml.dist
-phpstan.neon
-phpstan.neon.dist
-
-# Database Dumps
 *.sql
 *.sqlite
-
-# Documentation only needed for github, not for distribution
-CODE_OF_CONDUCT.md
-CONTRIBUTING.md
-README.md
-SECURITY.md
