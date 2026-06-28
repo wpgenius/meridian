@@ -1,0 +1,54 @@
+# Docker
+.docker
+docker-compose.yml
+
+# GitHub
+.github
+
+# Git
+.gitattributes
+.gitignore
+.distignore
+
+# Editor config
+.editorconfig
+
+# Environment
+.env
+
+# Node
+node_modules
+package-lock.json
+package.json
+
+# Documentation (GitHub-only)
+CHANGELOG.md
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
+CONTRIBUTORS.md
+SECURITY.md
+LICENSE
+README.md
+
+# Theme repo-only files
+SCREENSHOT-INSTRUCTIONS.txt
+
+# Testing / Linting
+tests
+phpunit.xml.dist
+phpcs.xml
+phpcs.xml.dist
+phpstan.neon
+phpstan.neon.dist
+.eslintrc
+.prettierrc
+.stylelintrc
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs / Dumps
+*.log
+*.sql
+*.sqlite

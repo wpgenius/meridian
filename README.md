@@ -2,6 +2,8 @@
 
 A clean, professional personal brand block theme for thought leaders, coaches, and executives.
 
+[![Live Preview](https://img.shields.io/badge/Live%20Preview-Try%20in%20Playground-3858e9?style=for-the-badge&logo=wordpress)](https://playground.wordpress.net/#%7B%22steps%22%3A%5B%7B%22step%22%3A%22installTheme%22%2C%22themeZipFile%22%3A%7B%22resource%22%3A%22url%22%2C%22url%22%3A%22https%3A%2F%2Fgithub.com%2Fwpgenius%2Fmeridian%2Freleases%2Flatest%2Fdownload%2Fmeridian.zip%22%7D%2C%22options%22%3A%7B%22activate%22%3Atrue%7D%7D%5D%7D)
+
 ## Features
 
 - **Two-column layout** with sticky sidebar (profile photo, bio, social links, newsletter opt-in)
@@ -27,11 +29,21 @@ A clean, professional personal brand block theme for thought leaders, coaches, a
 
 ### Manual / Development
 
-1. Clone this repository into your WordPress `wp-content/themes/` folder:
-   ```bash
-   git clone https://github.com/yourusername/meridian-wp-theme.git meridian
-   ```
-2. Activate the theme from **Appearance > Themes**
+**Option A — Clone directly into themes:**
+```bash
+git clone https://github.com/wpgenius/meridian.git wp-content/themes/meridian
+```
+
+**Option B — Docker (recommended for local dev):**
+```bash
+git clone https://github.com/wpgenius/meridian.git
+cd meridian
+cp .env.example .env   # edit credentials if needed
+docker compose up -d
+```
+WordPress runs at `http://localhost:8080`. The repo root mounts live into the container as the theme — no restart needed when you edit theme files.
+
+Activate the theme from **Appearance > Themes** in either case.
 
 ## Font Setup
 
@@ -61,15 +73,22 @@ To edit the sidebar:
 ## File Structure
 
 ```
-meridian/
+meridian/                   ← repo root = the theme (https://github.com/wpgenius/meridian)
+├── .docker/
+│   └── uploads.ini         # PHP upload config for Docker
+├── .github/
+│   ├── blueprints/
+│   │   └── playground.json # WordPress Playground live preview config
+│   └── workflows/
+│       └── release.yml     # Builds & publishes release zip on tag
 ├── assets/
 │   ├── css/
-│   │   ├── global.css        # Front-end styles
-│   │   └── editor.css        # Editor WYSIWYG styles
+│   │   ├── global.css      # Front-end styles
+│   │   └── editor.css      # Editor WYSIWYG styles
 │   └── fonts/
-│       └── README.txt        # Font download instructions
+│       └── README.txt      # Font download instructions
 ├── languages/
-│   └── meridian.pot          # Translation template
+│   └── meridian.pot        # Translation template
 ├── parts/
 │   ├── header.html
 │   ├── footer.html
@@ -82,21 +101,26 @@ meridian/
 │   ├── publications-list.php
 │   ├── newsletter-cta.php
 │   └── volunteering.php
+├── styles/                 # JSON style variations (Site Editor palette swaps)
 ├── templates/
-│   ├── index.html            # Main blog index
-│   ├── single.html           # Single post
-│   ├── page.html             # Static page
-│   ├── archive.html          # Category/tag archives
-│   ├── search.html           # Search results
-│   ├── 404.html              # Not found
-│   ├── no-sidebar.html       # Page without sidebar
-│   └── full-width.html       # Full-width page
+│   ├── index.html          # Main blog index
+│   ├── single.html         # Single post
+│   ├── page.html           # Static page
+│   ├── archive.html        # Category/tag archives
+│   ├── search.html         # Search results
+│   ├── 404.html            # Not found
+│   ├── no-sidebar.html     # Page without sidebar
+│   └── full-width.html     # Full-width page
+├── .distignore             # Files excluded from release zip
+├── .editorconfig
+├── .gitattributes
+├── docker-compose.yml
 ├── functions.php
 ├── index.php
-├── readme.txt                # WordPress.org readme
-├── screenshot.png            # Theme preview (1200x900)
-├── style.css                 # Theme header
-└── theme.json                # Design tokens
+├── readme.txt              # WordPress.org readme
+├── screenshot.png          # Theme preview (1200x900)
+├── style.css               # Theme header
+└── theme.json              # Design tokens
 ```
 
 ## WordPress.org Submission Checklist
