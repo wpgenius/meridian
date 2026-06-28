@@ -12,14 +12,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'MRDN_VERSION', '1.0.0' );
 
 /**
- * Google Fonts URL used across front-end and editor.
- * Inter (400/500/600/700) + DM Serif Display (400/400i).
- */
-function mrdn_google_fonts_url() {
-	return 'https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@400;500;600;700&display=swap';
-}
-
-/**
  * Sets up theme defaults and registers support for WordPress features.
  */
 function mrdn_setup() {
@@ -44,31 +36,19 @@ function mrdn_setup() {
 		)
 	);
 
-	register_nav_menus(
-		array(
-			'primary' => esc_html__( 'Primary Navigation', 'meridian' ),
-			'footer'  => esc_html__( 'Footer Navigation', 'meridian' ),
-			'social'  => esc_html__( 'Social Links', 'meridian' ),
-		)
-	);
+	add_editor_style( 'assets/css/editor.css' );
 }
 add_action( 'after_setup_theme', 'mrdn_setup' );
 
 /**
  * Enqueue theme styles.
+ * Fonts are declared in theme.json fontFace entries — no separate PHP enqueue needed.
  */
 function mrdn_enqueue_assets() {
 	wp_enqueue_style(
-		'meridian-google-fonts',
-		mrdn_google_fonts_url(),
-		array(),
-		null // phpcs:ignore WordPress.WP.EnqueuedResourceParameters.MissingVersion
-	);
-
-	wp_enqueue_style(
 		'meridian-style',
 		get_stylesheet_uri(),
-		array( 'meridian-google-fonts' ),
+		array(),
 		MRDN_VERSION
 	);
 
@@ -80,15 +60,6 @@ function mrdn_enqueue_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'mrdn_enqueue_assets' );
-
-/**
- * Enqueue editor styles.
- */
-function mrdn_editor_styles() {
-	add_editor_style( mrdn_google_fonts_url() );
-	add_editor_style( 'assets/css/editor.css' );
-}
-add_action( 'after_setup_theme', 'mrdn_editor_styles' );
 
 /**
  * Register block patterns categories.
