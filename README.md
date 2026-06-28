@@ -41,7 +41,7 @@ cd meridian
 cp .env.example .env   # edit credentials if needed
 docker compose up -d
 ```
-WordPress runs at `http://localhost:8080`. The `meridian/` folder mounts live into the container — no restart needed when you edit theme files.
+WordPress runs at `http://localhost:8080`. The repo root mounts live into the container as the theme — no restart needed when you edit theme files.
 
 Activate the theme from **Appearance > Themes** in either case.
 
@@ -73,54 +73,54 @@ To edit the sidebar:
 ## File Structure
 
 ```
-meridian/               ← repo root (https://github.com/wpgenius/meridian)
+meridian/                   ← repo root = the theme (https://github.com/wpgenius/meridian)
 ├── .docker/
 │   └── uploads.ini         # PHP upload config for Docker
 ├── .github/
+│   ├── blueprints/
+│   │   └── playground.json # WordPress Playground live preview config
 │   └── workflows/
 │       └── release.yml     # Builds & publishes release zip on tag
-├── meridian/               ← theme files (what goes in wp-content/themes/)
-│   ├── assets/
-│   │   ├── css/
-│   │   │   ├── global.css        # Front-end styles
-│   │   │   └── editor.css        # Editor WYSIWYG styles
-│   │   └── fonts/
-│   │       └── README.txt        # Font download instructions
-│   ├── languages/
-│   │   └── meridian.pot          # Translation template
-│   ├── parts/
-│   │   ├── header.html
-│   │   ├── footer.html
-│   │   └── sidebar.html
-│   ├── patterns/
-│   │   ├── hero-bio.php
-│   │   ├── expertise-grid.php
-│   │   ├── experience-timeline.php
-│   │   ├── talks-grid.php
-│   │   ├── publications-list.php
-│   │   ├── newsletter-cta.php
-│   │   └── volunteering.php
-│   ├── styles/                   # JSON style variations (Site Editor palette swaps)
-│   ├── templates/
-│   │   ├── index.html            # Main blog index
-│   │   ├── single.html           # Single post
-│   │   ├── page.html             # Static page
-│   │   ├── archive.html          # Category/tag archives
-│   │   ├── search.html           # Search results
-│   │   ├── 404.html              # Not found
-│   │   ├── no-sidebar.html       # Page without sidebar
-│   │   └── full-width.html       # Full-width page
-│   ├── functions.php
-│   ├── index.php
-│   ├── readme.txt                # WordPress.org readme
-│   ├── screenshot.png            # Theme preview (1200x900)
-│   ├── style.css                 # Theme header
-│   └── theme.json                # Design tokens
-├── .distignore                   # Files excluded from release zip
+├── assets/
+│   ├── css/
+│   │   ├── global.css      # Front-end styles
+│   │   └── editor.css      # Editor WYSIWYG styles
+│   └── fonts/
+│       └── README.txt      # Font download instructions
+├── languages/
+│   └── meridian.pot        # Translation template
+├── parts/
+│   ├── header.html
+│   ├── footer.html
+│   └── sidebar.html
+├── patterns/
+│   ├── hero-bio.php
+│   ├── expertise-grid.php
+│   ├── experience-timeline.php
+│   ├── talks-grid.php
+│   ├── publications-list.php
+│   ├── newsletter-cta.php
+│   └── volunteering.php
+├── styles/                 # JSON style variations (Site Editor palette swaps)
+├── templates/
+│   ├── index.html          # Main blog index
+│   ├── single.html         # Single post
+│   ├── page.html           # Static page
+│   ├── archive.html        # Category/tag archives
+│   ├── search.html         # Search results
+│   ├── 404.html            # Not found
+│   ├── no-sidebar.html     # Page without sidebar
+│   └── full-width.html     # Full-width page
+├── .distignore             # Files excluded from release zip
 ├── .editorconfig
 ├── .gitattributes
 ├── docker-compose.yml
-└── README.md
+├── functions.php
+├── index.php
+├── readme.txt              # WordPress.org readme
+├── screenshot.png          # Theme preview (1200x900)
+├── style.css               # Theme header
+└── theme.json              # Design tokens
 ```
 
 ## WordPress.org Submission Checklist

@@ -23,7 +23,7 @@ services:
       WORDPRESS_DB_USER: ${WORDPRESS_DB_USER}
       WORDPRESS_DB_PASSWORD: ${WORDPRESS_DB_PASSWORD}
     volumes:
-      - ./meridian:/var/www/html/wp-content/themes/meridian
+      - .:/var/www/html/wp-content/themes/meridian
       - ./.docker/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
   phpmyadmin:
