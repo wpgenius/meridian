@@ -54,8 +54,7 @@ Meridian uses **Google Fonts** — no local font files needed.
 | [Inter](https://fonts.google.com/specimen/Inter) | 400, 500, 600, 700 | Body text, UI, navigation |
 | [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display) | 400, 400i | Optional headings / display |
 
-Both are loaded automatically via `wp_enqueue_style` and registered in `theme.json`
-with Google Fonts CDN `src` URLs. No downloads or local files required.
+Both are declared via `fontFace` entries in `theme.json` with Google Fonts CDN `src` URLs — WordPress 6.x generates the `@font-face` CSS automatically. No PHP enqueue and no local downloads required.
 
 ## Customization
 
@@ -104,6 +103,7 @@ meridian/                   ← repo root = the theme (https://github.com/wpgeni
 ├── styles/                 # JSON style variations (Site Editor palette swaps)
 ├── templates/
 │   ├── index.html          # Main blog index
+│   ├── front-page.html     # Static homepage (profile content)
 │   ├── single.html         # Single post
 │   ├── page.html           # Static page
 │   ├── archive.html        # Category/tag archives
@@ -114,6 +114,9 @@ meridian/                   ← repo root = the theme (https://github.com/wpgeni
 ├── .distignore             # Files excluded from release zip
 ├── .editorconfig
 ├── .gitattributes
+├── CHANGELOG.md
+├── CONTRIBUTING.md
+├── CONTRIBUTORS.md
 ├── docker-compose.yml
 ├── functions.php
 ├── index.php
@@ -135,7 +138,7 @@ meridian/                   ← repo root = the theme (https://github.com/wpgeni
 - [x] Skip links and keyboard navigation
 - [x] Translation-ready with `.pot` file
 - [x] No forbidden files (`.sql`, `.xml`, `.sh`, etc.)
-- [x] Google Fonts loaded via `wp_enqueue_style` and registered in `theme.json`
+- [x] Google Fonts declared via `theme.json` `fontFace` entries (no PHP enqueue needed)
 - [ ] Create `screenshot.png` at 1200×900px
 - [ ] Run Theme Check plugin — resolve all errors/warnings
 - [ ] Test on latest WordPress with default content (Theme Unit Test data)
@@ -143,8 +146,7 @@ meridian/                   ← repo root = the theme (https://github.com/wpgeni
 
 ## Changelog
 
-### 1.0.0
-- Initial release
+See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 ## License
 

@@ -36,13 +36,7 @@ function mrdn_setup() {
 		)
 	);
 
-	register_nav_menus(
-		array(
-			'primary' => esc_html__( 'Primary Navigation', 'meridian' ),
-			'footer'  => esc_html__( 'Footer Navigation', 'meridian' ),
-			'social'  => esc_html__( 'Social Links', 'meridian' ),
-		)
-	);
+	add_editor_style( 'assets/css/editor.css' );
 }
 add_action( 'after_setup_theme', 'mrdn_setup' );
 
@@ -66,14 +60,6 @@ function mrdn_enqueue_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'mrdn_enqueue_assets' );
-
-/**
- * Enqueue editor styles.
- */
-function mrdn_editor_styles() {
-	add_editor_style( 'assets/css/editor.css' );
-}
-add_action( 'after_setup_theme', 'mrdn_editor_styles' );
 
 /**
  * Register block patterns categories.
