@@ -18,18 +18,18 @@ register_block_pattern(
 <h2 class="wp-block-heading has-text-align-center has-white-color has-text-color has-3-xl-font-size" style="font-weight:700">Never Miss a Post</h2>
 <!-- /wp:heading -->
 
-<!-- wp:paragraph {"textAlign":"center","fontSize":"md","textColor":"white","style":{"color":{"opacity":0.85}}} -->
+<!-- wp:paragraph {"textAlign":"center","fontSize":"md","textColor":"white"} -->
 <p class="has-text-align-center has-white-color has-text-color has-md-font-size">Get weekly insights on leadership, resilience, and peak performance delivered straight to your inbox.</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:html -->
 <div class="mrdn-subscribe-form-wrap" style="max-width:420px;margin:0 auto">
 	<form action="#" method="post" class="mrdn-subscribe-form mrdn-subscribe-form--cta">
-		<label for="mrdn-cta-email" class="screen-reader-text"><?php esc_html_e( 'Your email address', 'meridian' ); ?></label>
-		<input type="email" id="mrdn-cta-email" name="email" placeholder="<?php esc_attr_e( 'Your best email address', 'meridian' ); ?>" required autocomplete="email" />
-		<button type="submit"><?php esc_html_e( 'Subscribe Free', 'meridian' ); ?></button>
+		<label for="mrdn-cta-email" class="screen-reader-text">Your email address</label>
+		<input type="email" id="mrdn-cta-email" name="email" placeholder="Your best email address" required autocomplete="email" />
+		<button type="submit">Subscribe Free</button>
 	</form>
-	<p class="mrdn-subscribe-privacy"><?php esc_html_e( 'No spam, ever. Unsubscribe anytime.', 'meridian' ); ?></p>
+	<p class="mrdn-subscribe-privacy">No spam, ever. Unsubscribe anytime.</p>
 </div>
 <!-- /wp:html -->
 
