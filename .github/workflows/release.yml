@@ -1,32 +1,41 @@
-name: Release
+name: Build Plugin Release
 
 on:
   push:
     tags:
       - 'v*'
 
+permissions:
+  contents: write
+
 jobs:
-  release:
+  build-release:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build staging copy
+      - name: Determine theme slug
+        id: theme
         run: |
-          mkdir -p staging/meridian
-          rsync -r --exclude-from=.distignore . staging/meridian/
+          SLUG=$(basename $GITHUB_REPOSITORY)
+          echo "slug=$SLUG" >> $GITHUB_OUTPUT
 
-      - name: Zip release
+      - name: Build release package
         run: |
-          cd staging
-          zip -r ../meridian.zip meridian/
+          SLUG=${{ steps.theme.outputs.slug }}
+          mkdir -p release/$SLUG
+          rsync -av . release/$SLUG/ \
+            --exclude-from='.distignore' \
+            --exclude='.git/' \
+            --exclude='release' \
+            --exclude='*.zip'
+          cd release
+          zip -r ../${SLUG}.zip $SLUG
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          files: meridian.zip
+          files: ${{ steps.theme.outputs.slug }}.zip
           generate_release_notes: true

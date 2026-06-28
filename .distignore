@@ -1,10 +1,53 @@
-.git
+# GitHub
 .github
-.gitignore
-.gitkeep
-.distignore
+
+# IDE
+.vscode
+.idea
+
+# Docker
+.docker
+Dockerfile
+docker-compose.yml
+
+# Environment
 .env
+
+# Git
+.gitignore
+.distignore
+
+# Testing
+tests
+phpunit.xml.dist
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Node
 node_modules
+composer.lock
 package-lock.json
-package.json
+vendor/bin
+.editorconfig
+.eslintrc
+.prettierrc
+.stylelintrc
+phpcs.xml
+phpcs.xml.dist
+phpstan.neon
+phpstan.neon.dist
+
+# Database Dumps
+*.sql
+*.sqlite
+
+# Documentation only needed for github, not for distribution
+CODE_OF_CONDUCT.md
+CONTRIBUTING.md
 README.md
+SECURITY.md
