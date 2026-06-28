@@ -14,6 +14,17 @@
       "options": {
         "activate": true
       }
+    },
+    {
+      "step": "setSiteOptions",
+      "options": {
+        "blogname": "Vallabh Chitnis",
+        "blogdescription": "Leadership Coach & Executive Consultant"
+      }
+    },
+    {
+      "step": "runPHP",
+      "code": "<?php\nrequire '/wordpress/wp-load.php';\n\n$content = '<!-- wp:pattern {\"slug\":\"meridian/hero-bio\"} /-->\n<!-- wp:pattern {\"slug\":\"meridian/expertise-grid\"} /-->\n<!-- wp:pattern {\"slug\":\"meridian/experience-timeline\"} /-->\n<!-- wp:pattern {\"slug\":\"meridian/volunteering\"} /-->\n<!-- wp:pattern {\"slug\":\"meridian/talks-grid\"} /-->\n<!-- wp:pattern {\"slug\":\"meridian/publications-list\"} /-->\n<!-- wp:pattern {\"slug\":\"meridian/newsletter-cta\"} /-->';\n\n$post_id = wp_insert_post( [\n\t'post_title'   => 'Home',\n\t'post_name'    => 'home',\n\t'post_status'  => 'publish',\n\t'post_type'    => 'page',\n\t'post_content' => $content,\n] );\n\nif ( $post_id && ! is_wp_error( $post_id ) ) {\n\tupdate_option( 'show_on_front', 'page' );\n\tupdate_option( 'page_on_front', $post_id );\n}\n?>"
     }
   ]
 }
