@@ -2,6 +2,8 @@
 
 A clean, professional personal brand block theme for thought leaders, coaches, and executives.
 
+[![Live Preview](https://img.shields.io/badge/Live%20Preview-Try%20in%20Playground-3858e9?style=for-the-badge&logo=wordpress)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/mkrndmane/meridian-wp-theme/main/.github/blueprints/playground.json)
+
 ## Features
 
 - **Two-column layout** with sticky sidebar (profile photo, bio, social links, newsletter opt-in)
@@ -27,11 +29,21 @@ A clean, professional personal brand block theme for thought leaders, coaches, a
 
 ### Manual / Development
 
-1. Clone this repository into your WordPress `wp-content/themes/` folder:
-   ```bash
-   git clone https://github.com/yourusername/meridian-wp-theme.git meridian
-   ```
-2. Activate the theme from **Appearance > Themes**
+**Option A — Clone directly into themes:**
+```bash
+git clone https://github.com/mkrndmane/meridian-wp-theme.git wp-content/themes/meridian
+```
+
+**Option B — Docker (recommended for local dev):**
+```bash
+git clone https://github.com/mkrndmane/meridian-wp-theme.git
+cd meridian-wp-theme
+cp .env.example .env   # edit credentials if needed
+docker compose up -d
+```
+WordPress runs at `http://localhost:8080`. The `meridian/` folder mounts live into the container — no restart needed when you edit theme files.
+
+Activate the theme from **Appearance > Themes** in either case.
 
 ## Font Setup
 
@@ -61,42 +73,54 @@ To edit the sidebar:
 ## File Structure
 
 ```
-meridian/
-├── assets/
-│   ├── css/
-│   │   ├── global.css        # Front-end styles
-│   │   └── editor.css        # Editor WYSIWYG styles
-│   └── fonts/
-│       └── README.txt        # Font download instructions
-├── languages/
-│   └── meridian.pot          # Translation template
-├── parts/
-│   ├── header.html
-│   ├── footer.html
-│   └── sidebar.html
-├── patterns/
-│   ├── hero-bio.php
-│   ├── expertise-grid.php
-│   ├── experience-timeline.php
-│   ├── talks-grid.php
-│   ├── publications-list.php
-│   ├── newsletter-cta.php
-│   └── volunteering.php
-├── templates/
-│   ├── index.html            # Main blog index
-│   ├── single.html           # Single post
-│   ├── page.html             # Static page
-│   ├── archive.html          # Category/tag archives
-│   ├── search.html           # Search results
-│   ├── 404.html              # Not found
-│   ├── no-sidebar.html       # Page without sidebar
-│   └── full-width.html       # Full-width page
-├── functions.php
-├── index.php
-├── readme.txt                # WordPress.org readme
-├── screenshot.png            # Theme preview (1200x900)
-├── style.css                 # Theme header
-└── theme.json                # Design tokens
+meridian-wp-theme/          ← repo root
+├── .docker/
+│   └── uploads.ini         # PHP upload config for Docker
+├── .github/
+│   └── workflows/
+│       └── release.yml     # Builds & publishes release zip on tag
+├── meridian/               ← theme files (what goes in wp-content/themes/)
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── global.css        # Front-end styles
+│   │   │   └── editor.css        # Editor WYSIWYG styles
+│   │   └── fonts/
+│   │       └── README.txt        # Font download instructions
+│   ├── languages/
+│   │   └── meridian.pot          # Translation template
+│   ├── parts/
+│   │   ├── header.html
+│   │   ├── footer.html
+│   │   └── sidebar.html
+│   ├── patterns/
+│   │   ├── hero-bio.php
+│   │   ├── expertise-grid.php
+│   │   ├── experience-timeline.php
+│   │   ├── talks-grid.php
+│   │   ├── publications-list.php
+│   │   ├── newsletter-cta.php
+│   │   └── volunteering.php
+│   ├── styles/                   # JSON style variations (Site Editor palette swaps)
+│   ├── templates/
+│   │   ├── index.html            # Main blog index
+│   │   ├── single.html           # Single post
+│   │   ├── page.html             # Static page
+│   │   ├── archive.html          # Category/tag archives
+│   │   ├── search.html           # Search results
+│   │   ├── 404.html              # Not found
+│   │   ├── no-sidebar.html       # Page without sidebar
+│   │   └── full-width.html       # Full-width page
+│   ├── functions.php
+│   ├── index.php
+│   ├── readme.txt                # WordPress.org readme
+│   ├── screenshot.png            # Theme preview (1200x900)
+│   ├── style.css                 # Theme header
+│   └── theme.json                # Design tokens
+├── .distignore                   # Files excluded from release zip
+├── .editorconfig
+├── .gitattributes
+├── docker-compose.yml
+└── README.md
 ```
 
 ## WordPress.org Submission Checklist

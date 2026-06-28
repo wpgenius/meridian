@@ -1,0 +1,19 @@
+{
+  "$schema": "https://playground.wordpress.net/blueprint-schema.json",
+  "preferredVersions": {
+    "php": "8.2",
+    "wp": "latest"
+  },
+  "steps": [
+    {
+      "step": "installTheme",
+      "themeZipFile": {
+        "resource": "url",
+        "url": "https://github.com/mkrndmane/meridian-wp-theme/releases/latest/download/meridian-wp-theme.zip"
+      },
+      "options": {
+        "activate": true
+      }
+    }
+  ]
+}
