@@ -20,10 +20,6 @@
 	<!-- wp:group {"className":"sidebar-bio","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 	<div class="wp-block-group sidebar-bio">
 
-		<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em","textTransform":"uppercase"}},"fontSize":"xs","textColor":"neutral-400"} -->
-		<h3 class="wp-block-heading has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase">About</h3>
-		<!-- /wp:heading -->
-
 		<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
 		<p class="has-neutral-700-color has-text-color has-sm-font-size">Helping founders, CXOs, and mid-career leaders build resilience, clarity, and peak performance through 20+ years of corporate leadership expertise and practical mind-body strategies.</p>
 		<!-- /wp:paragraph -->
@@ -44,10 +40,10 @@
 
 		<!-- wp:html -->
 		<div class="sidebar-subscribe__form">
-			<form action="#" method="post" class="mrdn-subscribe-form" aria-label="<?php esc_attr_e( 'Email subscribe form', 'meridian' ); ?>">
-				<label for="mrdn-sidebar-email" class="screen-reader-text"><?php esc_html_e( 'Your email address', 'meridian' ); ?></label>
-				<input type="email" id="mrdn-sidebar-email" name="email" placeholder="<?php esc_attr_e( 'Your best email address', 'meridian' ); ?>" required autocomplete="email" />
-				<button type="submit"><?php esc_html_e( 'Subscribe', 'meridian' ); ?></button>
+			<form action="#" method="post" class="mrdn-subscribe-form" aria-label="Email subscribe form">
+				<label for="mrdn-sidebar-email" class="screen-reader-text">Your email address</label>
+				<input type="email" id="mrdn-sidebar-email" name="email" placeholder="Your best email address" required autocomplete="email" />
+				<button type="submit">Subscribe</button>
 			</form>
 		</div>
 		<!-- /wp:html -->

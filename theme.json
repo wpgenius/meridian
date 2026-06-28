@@ -29,9 +29,9 @@
         { "slug": "neutral-600",  "color": "#4b5563", "name": "Neutral 600" },
         { "slug": "neutral-400",  "color": "#9ca3af", "name": "Neutral 400" },
         { "slug": "neutral-200",  "color": "#e5e7eb", "name": "Neutral 200" },
-        { "slug": "neutral-100",  "color": "#f3f4f6", "name": "Neutral 100" },
+        { "slug": "neutral-100",  "color": "#f5f3ef", "name": "Neutral 100" },
         { "slug": "white",        "color": "#ffffff", "name": "White" },
-        { "slug": "base",         "color": "#fafafa", "name": "Site Background" }
+        { "slug": "base",         "color": "#f9f8f5", "name": "Site Background" }
       ]
     },
     "typography": {
@@ -169,7 +169,7 @@
     "typography": {
       "fontFamily": "var(--wp--preset--font-family--inter)",
       "fontSize": "var(--wp--preset--font-size--base)",
-      "lineHeight": "1.6"
+      "lineHeight": "1.7"
     },
     "spacing": {
       "blockGap": "var(--wp--preset--spacing--6)"
@@ -177,17 +177,21 @@
     "elements": {
       "h1": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--dm-serif-display)",
           "fontSize": "var(--wp--preset--font-size--4xl)",
-          "fontWeight": "700",
-          "lineHeight": "1.15"
+          "fontWeight": "400",
+          "lineHeight": "1.1",
+          "letterSpacing": "-0.02em"
         },
         "color": { "text": "var(--wp--preset--color--neutral-900)" }
       },
       "h2": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--dm-serif-display)",
           "fontSize": "var(--wp--preset--font-size--3xl)",
-          "fontWeight": "700",
-          "lineHeight": "1.2"
+          "fontWeight": "400",
+          "lineHeight": "1.15",
+          "letterSpacing": "-0.01em"
         },
         "color": { "text": "var(--wp--preset--color--neutral-900)" }
       },
@@ -275,9 +279,11 @@
       },
       "core/post-title": {
         "typography": {
+          "fontFamily": "var(--wp--preset--font-family--dm-serif-display)",
           "fontSize": "var(--wp--preset--font-size--3xl)",
-          "fontWeight": "700",
-          "lineHeight": "1.2"
+          "fontWeight": "400",
+          "lineHeight": "1.15",
+          "letterSpacing": "-0.01em"
         },
         "color": { "text": "var(--wp--preset--color--neutral-900)" }
       },

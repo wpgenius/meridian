@@ -84,15 +84,23 @@ textarea:focus-visible {
 }
 
 /* =========================================================
-   Site Header
+   Site Header — frosted glass
    ========================================================= */
 
 .site-header {
 	position: sticky;
 	top: 0;
 	z-index: 100;
-	border-bottom: 1px solid var(--wp--preset--color--neutral-200);
-	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+	background-color: rgba(249, 248, 245, 0.88) !important;
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.site-header .wp-block-site-title a,
+.site-header .wp-block-navigation a {
+	text-decoration: none;
 }
 
 .site-header__inner {
@@ -143,13 +151,42 @@ textarea:focus-visible {
 
 .site-sidebar {
 	padding-top: var(--wp--preset--spacing--8);
+	border-right: 1px solid var(--wp--preset--color--neutral-200);
+	padding-right: var(--wp--preset--spacing--8);
 }
 
-.sidebar-profile__avatar img {
+/* Site logo used as circular avatar in sidebar */
+.site-sidebar .wp-block-site-logo img {
 	border-radius: 50%;
 	object-fit: cover;
-	display: block;
-	margin-inline: auto;
+}
+
+@media (max-width: 781px) {
+	.site-sidebar {
+		border-right: none;
+		padding-right: 0;
+		border-bottom: 1px solid var(--wp--preset--color--neutral-200);
+		padding-bottom: var(--wp--preset--spacing--8);
+	}
+}
+
+/* =========================================================
+   Hero Bio
+   ========================================================= */
+
+.hero-bio {
+	background: linear-gradient(160deg, var(--wp--preset--color--neutral-100) 0%, var(--wp--preset--color--white) 55%) !important;
+}
+
+/* Avatar placeholder when no image is assigned */
+.hero-bio__avatar {
+	background: linear-gradient(135deg, var(--wp--preset--color--neutral-200) 0%, var(--wp--preset--color--neutral-100) 100%);
+	border-radius: 50%;
+}
+
+.hero-bio__avatar img:not([src]),
+.hero-bio__avatar img[src=""] {
+	opacity: 0;
 }
 
 /* =========================================================
@@ -177,7 +214,7 @@ textarea:focus-visible {
 .mrdn-subscribe-form input[type="email"]:focus {
 	outline: none;
 	border-color: var(--wp--preset--color--primary);
-	box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.12);
+	box-shadow: 0 0 0 3px rgba(26, 82, 118, 0.1);
 }
 
 .mrdn-subscribe-form input[type="email"]::placeholder {
@@ -195,11 +232,12 @@ textarea:focus-visible {
 	font-weight: 600;
 	font-family: var(--wp--preset--font-family--inter);
 	cursor: pointer;
-	transition: background-color 0.15s ease, transform 0.1s ease;
+	transition: background-color 0.18s ease, opacity 0.18s ease, transform 0.1s ease;
 }
 
 .mrdn-subscribe-form button[type="submit"]:hover {
 	background-color: var(--wp--preset--color--primary-dark);
+	opacity: 0.95;
 }
 
 .mrdn-subscribe-form button[type="submit"]:active {
@@ -282,7 +320,7 @@ textarea:focus-visible {
 }
 
 .post-card:hover {
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
 	transform: translateY(-2px);
 }
 
@@ -296,6 +334,20 @@ textarea:focus-visible {
 }
 
 /* =========================================================
+   Expertise Cards
+   ========================================================= */
+
+.expertise-card {
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.04);
+	transition: box-shadow 0.22s ease, transform 0.22s ease;
+}
+
+.expertise-card:hover {
+	box-shadow: 0 8px 28px rgba(0, 0, 0, 0.09), 0 2px 6px rgba(0, 0, 0, 0.05);
+	transform: translateY(-3px);
+}
+
+/* =========================================================
    Timeline
    ========================================================= */
 
@@ -306,13 +358,13 @@ textarea:focus-visible {
 .timeline-item::before {
 	content: "";
 	position: absolute;
-	left: -7px;
-	top: 0.375rem;
-	width: 11px;
-	height: 11px;
+	left: -8px;
+	top: 0.35rem;
+	width: 12px;
+	height: 12px;
 	border-radius: 50%;
 	background-color: var(--wp--preset--color--primary);
-	border: 2px solid var(--wp--preset--color--white);
+	border: 2px solid var(--wp--preset--color--base);
 	box-shadow: 0 0 0 2px var(--wp--preset--color--primary);
 }
 
@@ -321,11 +373,12 @@ textarea:focus-visible {
    ========================================================= */
 
 .talk-card {
-	transition: box-shadow 0.2s ease, transform 0.2s ease;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05), 0 1px 3px rgba(0, 0, 0, 0.04);
+	transition: box-shadow 0.22s ease, transform 0.22s ease;
 }
 
 .talk-card:hover {
-	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 10px 32px rgba(0, 0, 0, 0.1);
 	transform: translateY(-3px);
 }
 
@@ -338,11 +391,28 @@ textarea:focus-visible {
    ========================================================= */
 
 .publication-item {
-	transition: box-shadow 0.2s ease;
+	border-left: 3px solid var(--wp--preset--color--primary) !important;
+	border-radius: 0 8px 8px 0 !important;
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
 .publication-item:hover {
-	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+	transform: translateX(2px);
+}
+
+/* =========================================================
+   Volunteering Items
+   ========================================================= */
+
+.volunteering-item {
+	border-left: 3px solid var(--wp--preset--color--secondary) !important;
+	border-radius: 0 8px 8px 0 !important;
+	transition: box-shadow 0.2s ease;
+}
+
+.volunteering-item:hover {
+	box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
 }
 
 /* =========================================================
@@ -445,9 +515,11 @@ textarea:focus-visible {
    RTL Support
    ========================================================= */
 
-[dir="rtl"] .site-layout__sidebar {
-	border-left: none;
-	border-right: 1px solid var(--wp--preset--color--neutral-200);
+[dir="rtl"] .site-sidebar {
+	border-right: none;
+	border-left: 1px solid var(--wp--preset--color--neutral-200);
+	padding-right: 0;
+	padding-left: var(--wp--preset--spacing--8);
 }
 
 [dir="rtl"] .timeline-item {
@@ -459,5 +531,16 @@ textarea:focus-visible {
 
 [dir="rtl"] .timeline-item::before {
 	left: auto;
-	right: -7px;
+	right: -8px;
+}
+
+[dir="rtl"] .publication-item,
+[dir="rtl"] .volunteering-item {
+	border-left: none !important;
+	border-right: 3px solid var(--wp--preset--color--primary) !important;
+	border-radius: 8px 0 0 8px !important;
+}
+
+[dir="rtl"] .publication-item:hover {
+	transform: translateX(-2px);
 }
