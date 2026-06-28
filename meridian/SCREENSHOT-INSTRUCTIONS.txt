@@ -1,0 +1,22 @@
+SCREENSHOT REQUIRED
+===================
+
+WordPress.org requires a screenshot.png at exactly 1200x900px (4:3 ratio).
+
+Instructions:
+1. Install Meridian on a local WordPress site.
+2. Import the Theme Unit Test data: https://codex.wordpress.org/Theme_Unit_Test
+3. Set up your homepage with the Hero Bio pattern and some content.
+4. Use a browser at 1200px wide and capture a full-page screenshot.
+5. Crop to 1200x900px and save as screenshot.png in this folder.
+
+Requirements:
+- Must NOT look like an advertisement
+- Must NOT include the WordPress logo
+- Must be exactly 1200x900px
+- Replace this file with the actual screenshot.png before submitting to WordPress.org
+
+Demo content tip:
+Use a royalty-free CC0 photo from Pexels as the profile image placeholder.
+Example: https://www.pexels.com/photo/person-standing-near-window-3184339/
+Photographer: fauxels — Pexels License (free to use)

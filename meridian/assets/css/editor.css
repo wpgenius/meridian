@@ -1,0 +1,69 @@
+/**
+ * Meridian Editor Styles
+ * Loaded in the block editor for a WYSIWYG experience.
+ *
+ * @package meridian
+ */
+
+.editor-styles-wrapper {
+	font-family: var(--wp--preset--font-family--inter);
+	color: var(--wp--preset--color--neutral-800);
+	background-color: var(--wp--preset--color--base);
+}
+
+.editor-styles-wrapper h1,
+.editor-styles-wrapper h2,
+.editor-styles-wrapper h3,
+.editor-styles-wrapper h4,
+.editor-styles-wrapper h5,
+.editor-styles-wrapper h6 {
+	color: var(--wp--preset--color--neutral-900);
+}
+
+.editor-styles-wrapper a {
+	color: var(--wp--preset--color--primary);
+}
+
+.editor-styles-wrapper a:hover {
+	color: var(--wp--preset--color--primary-dark);
+}
+
+.editor-styles-wrapper .wp-block-post-content > *,
+.editor-styles-wrapper .wp-block > * {
+	max-width: 100%;
+}
+
+/* Timeline editor indicator */
+.editor-styles-wrapper .timeline-item {
+	border-left: 3px solid var(--wp--preset--color--primary);
+	padding-left: var(--wp--preset--spacing--6);
+}
+
+/* Sidebar in editor */
+.editor-styles-wrapper .site-sidebar {
+	background-color: var(--wp--preset--color--white);
+	border-radius: 8px;
+	padding: var(--wp--preset--spacing--6);
+}
+
+/* Subscribe forms in editor */
+.editor-styles-wrapper .mrdn-subscribe-form input[type="email"] {
+	background: var(--wp--preset--color--neutral-100);
+	border: 1px solid var(--wp--preset--color--neutral-200);
+	border-radius: 6px;
+	padding: 0.625rem 0.875rem;
+	font-size: var(--wp--preset--font-size--sm);
+	width: 100%;
+	margin-bottom: 0.5rem;
+}
+
+.editor-styles-wrapper .mrdn-subscribe-form button[type="submit"] {
+	background-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+	border: none;
+	border-radius: 6px;
+	padding: 0.625rem 1rem;
+	font-size: var(--wp--preset--font-size--sm);
+	font-weight: 600;
+	width: 100%;
+}

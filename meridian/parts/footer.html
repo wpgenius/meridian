@@ -1,0 +1,88 @@
+<!-- wp:group {"tagName":"footer","className":"site-footer","style":{"spacing":{"padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|8"},"border":{"top":{"color":"var:preset|color|neutral-200","width":"1px","style":"solid"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
+<footer class="wp-block-group site-footer has-white-background-color has-background">
+
+	<!-- wp:group {"className":"site-footer__top","style":{"spacing":{"blockGap":"var:preset|spacing|8"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"top"}} -->
+	<div class="wp-block-group site-footer__top">
+
+		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"center"}} -->
+			<div class="wp-block-group">
+				<!-- wp:site-logo {"width":36} /-->
+				<!-- wp:site-title {"style":{"typography":{"fontWeight":"700"},"spacing":{"margin":{"left":"var:preset|spacing|2"}}},"fontSize":"md"} /-->
+			</div>
+			<!-- /wp:group -->
+
+			<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600","style":{"layout":{"selfStretch":"fit","flexSize":null},"dimensions":{"minHeight":""}}} -->
+			<p class="has-neutral-600-color has-text-color has-sm-font-size">Building resilience, clarity, and<br>peak performance for high performers.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:social-links {"iconColor":"neutral-600","iconColorValue":"#4b5563","size":"has-normal-icon-size","className":"is-style-logos-only","style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
+			<ul class="wp-block-social-links has-icon-color is-style-logos-only">
+				<!-- wp:social-link {"url":"https://linkedin.com","service":"linkedin","label":"LinkedIn"} /-->
+				<!-- wp:social-link {"url":"https://twitter.com","service":"x","label":"X (Twitter)"} /-->
+				<!-- wp:social-link {"url":"https://youtube.com","service":"youtube","label":"YouTube"} /-->
+			</ul>
+			<!-- /wp:social-links -->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600","letterSpacing":"0.06em","textTransform":"uppercase"}},"fontSize":"xs","textColor":"neutral-400"} -->
+			<h4 class="wp-block-heading has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Navigation</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:navigation {"overlayMenu":"never","layout":{"type":"flex","orientation":"vertical","justifyContent":"left"},"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"textColor":"neutral-700","fontSize":"sm"} /-->
+
+		</div>
+		<!-- /wp:group -->
+
+		<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+		<div class="wp-block-group">
+
+			<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600","letterSpacing":"0.06em","textTransform":"uppercase"}},"fontSize":"xs","textColor":"neutral-400"} -->
+			<h4 class="wp-block-heading has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;letter-spacing:0.06em;text-transform:uppercase">Newsletter</h4>
+			<!-- /wp:heading -->
+
+			<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
+			<p class="has-neutral-600-color has-text-color has-sm-font-size">Get insights on leadership,<br>resilience, and peak performance.</p>
+			<!-- /wp:paragraph -->
+
+			<!-- wp:html -->
+			<form action="#" method="post" class="mrdn-subscribe-form mrdn-subscribe-form--footer" aria-label="<?php esc_attr_e( 'Footer email subscribe form', 'meridian' ); ?>">
+				<label for="mrdn-footer-email" class="screen-reader-text"><?php esc_html_e( 'Your email address', 'meridian' ); ?></label>
+				<input type="email" id="mrdn-footer-email" name="email" placeholder="<?php esc_attr_e( 'Your email address', 'meridian' ); ?>" required autocomplete="email" />
+				<button type="submit"><?php esc_html_e( 'Subscribe', 'meridian' ); ?></button>
+			</form>
+			<!-- /wp:html -->
+
+		</div>
+		<!-- /wp:group -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:separator {"style":{"color":{"background":"var:preset|color|neutral-200"}},"backgroundColor":"neutral-200"} -->
+	<hr class="wp-block-separator has-text-color has-neutral-200-color has-alpha-channel-opacity has-neutral-200-background-color has-background"/>
+	<!-- /wp:separator -->
+
+	<!-- wp:group {"className":"site-footer__bottom","style":{"spacing":{"blockGap":"0"}},"layout":{"type":"flex","flexWrap":"wrap","justifyContent":"space-between","verticalAlignment":"center"}} -->
+	<div class="wp-block-group site-footer__bottom">
+
+		<!-- wp:paragraph {"fontSize":"xs","textColor":"neutral-400"} -->
+		<p class="has-neutral-400-color has-text-color has-xs-font-size">© <strong class="site-copyright-year">2024</strong> <!-- wp:site-title {"isLink":false,"style":{"typography":{"fontWeight":"normal"}}} /-->. All rights reserved.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:paragraph {"fontSize":"xs","textColor":"neutral-400","style":{"elements":{"link":{"color":{"text":"var:preset|color|neutral-400"}}}}} -->
+		<p class="has-neutral-400-color has-text-color has-xs-font-size">Powered by <a href="https://wordpress.org" rel="nofollow">WordPress</a> &amp; <a href="https://wordpress.org/themes/meridian" rel="nofollow">Meridian</a></p>
+		<!-- /wp:paragraph -->
+
+	</div>
+	<!-- /wp:group -->
+
+</footer>
+<!-- /wp:group -->

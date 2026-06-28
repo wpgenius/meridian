@@ -1,0 +1,83 @@
+<!-- wp:group {"tagName":"aside","className":"site-sidebar","style":{"spacing":{"padding":{"top":"var:preset|spacing|8","bottom":"var:preset|spacing|8"},"blockGap":"var:preset|spacing|6"}},"layout":{"type":"flex","flexWrap":"wrap","orientation":"vertical"}} -->
+<aside class="wp-block-group site-sidebar">
+
+	<!-- wp:group {"className":"sidebar-profile","style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical","verticalAlignment":"top","justifyContent":"center"}} -->
+	<div class="wp-block-group sidebar-profile">
+
+		<!-- wp:image {"width":"120px","height":"120px","scale":"cover","className":"sidebar-profile__avatar","style":{"border":{"radius":"50%","color":"var:preset|color|neutral-200","width":"3px","style":"solid"},"spacing":{"margin":{"bottom":"var:preset|spacing|2"}}}} -->
+		<figure class="wp-block-image sidebar-profile__avatar" style="margin-bottom:var(--wp--preset--spacing--2)"><img src="" alt="" style="border-radius:50%;border-color:var(--wp--preset--color--neutral-200);border-style:solid;border-width:3px;object-fit:cover;width:120px;height:120px"/></figure>
+		<!-- /wp:image -->
+
+		<!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700"}},"fontSize":"xl","textColor":"neutral-900"} -->
+		<h2 class="wp-block-heading has-neutral-900-color has-text-color has-xl-font-size" style="font-weight:700">Your Name</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
+		<p class="has-neutral-600-color has-text-color has-sm-font-size">Leadership Coach &amp; Executive Consultant</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:separator {"className":"is-style-wide","style":{"color":{"background":"var:preset|color|neutral-200"}},"backgroundColor":"neutral-200"} -->
+		<hr class="wp-block-separator has-text-color has-neutral-200-color has-alpha-channel-opacity has-neutral-200-background-color has-background is-style-wide"/>
+		<!-- /wp:separator -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"sidebar-bio","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group sidebar-bio">
+
+		<!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em","textTransform":"uppercase"}},"fontSize":"xs","textColor":"neutral-400"} -->
+		<h3 class="wp-block-heading has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase">About</h3>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
+		<p class="has-neutral-700-color has-text-color has-sm-font-size">Helping founders, CXOs, and mid-career leaders build resilience, clarity, and peak performance through 20+ years of corporate leadership expertise and practical mind-body strategies.</p>
+		<!-- /wp:paragraph -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"sidebar-subscribe","style":{"spacing":{"padding":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|5","left":"var:preset|spacing|5","right":"var:preset|spacing|5"},"blockGap":"var:preset|spacing|3"},"border":{"radius":"8px"}},"backgroundColor":"neutral-100","layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group sidebar-subscribe has-neutral-100-background-color has-background" style="border-radius:8px;padding-top:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--5);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--5)">
+
+		<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"sm","textColor":"neutral-900"} -->
+		<h4 class="wp-block-heading has-neutral-900-color has-text-color has-sm-font-size" style="font-weight:600">Never Miss a Post</h4>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"fontSize":"xs","textColor":"neutral-600"} -->
+		<p class="has-neutral-600-color has-text-color has-xs-font-size">Be the first to know. Straight to your inbox.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:html -->
+		<div class="sidebar-subscribe__form">
+			<form action="#" method="post" class="mrdn-subscribe-form" aria-label="<?php esc_attr_e( 'Email subscribe form', 'meridian' ); ?>">
+				<label for="mrdn-sidebar-email" class="screen-reader-text"><?php esc_html_e( 'Your email address', 'meridian' ); ?></label>
+				<input type="email" id="mrdn-sidebar-email" name="email" placeholder="<?php esc_attr_e( 'Your best email address', 'meridian' ); ?>" required autocomplete="email" />
+				<button type="submit"><?php esc_html_e( 'Subscribe', 'meridian' ); ?></button>
+			</form>
+		</div>
+		<!-- /wp:html -->
+
+	</div>
+	<!-- /wp:group -->
+
+	<!-- wp:group {"className":"sidebar-social","style":{"spacing":{"blockGap":"var:preset|spacing|3"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+	<div class="wp-block-group sidebar-social">
+
+		<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600","letterSpacing":"0.05em","textTransform":"uppercase"}},"fontSize":"xs","textColor":"neutral-400"} -->
+		<h4 class="wp-block-heading has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;letter-spacing:0.05em;text-transform:uppercase">Connect</h4>
+		<!-- /wp:heading -->
+
+		<!-- wp:social-links {"iconColor":"neutral-700","iconColorValue":"#374151","size":"has-normal-icon-size","className":"is-style-logos-only","style":{"spacing":{"blockGap":"var:preset|spacing|4"}}} -->
+		<ul class="wp-block-social-links has-icon-color is-style-logos-only">
+			<!-- wp:social-link {"url":"https://linkedin.com","service":"linkedin","label":"LinkedIn"} /-->
+			<!-- wp:social-link {"url":"https://twitter.com","service":"x","label":"X (Twitter)"} /-->
+			<!-- wp:social-link {"url":"https://youtube.com","service":"youtube","label":"YouTube"} /-->
+		</ul>
+		<!-- /wp:social-links -->
+
+	</div>
+	<!-- /wp:group -->
+
+</aside>
+<!-- /wp:group -->
