@@ -2,7 +2,7 @@
 
 A clean, professional personal brand block theme for thought leaders, coaches, and executives.
 
-[![Live Preview](https://img.shields.io/badge/Live%20Preview-Try%20in%20Playground-3858e9?style=for-the-badge&logo=wordpress)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/mkrndmane/meridian-wp-theme/main/.github/blueprints/playground.json)
+[![Live Preview](https://img.shields.io/badge/Live%20Preview-Try%20in%20Playground-3858e9?style=for-the-badge&logo=wordpress)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/wpgenius/meridian/main/.github/blueprints/playground.json)
 
 ## Features
 
@@ -31,13 +31,13 @@ A clean, professional personal brand block theme for thought leaders, coaches, a
 
 **Option A — Clone directly into themes:**
 ```bash
-git clone https://github.com/mkrndmane/meridian-wp-theme.git wp-content/themes/meridian
+git clone https://github.com/wpgenius/meridian.git wp-content/themes/meridian
 ```
 
 **Option B — Docker (recommended for local dev):**
 ```bash
-git clone https://github.com/mkrndmane/meridian-wp-theme.git
-cd meridian-wp-theme
+git clone https://github.com/wpgenius/meridian.git
+cd meridian
 cp .env.example .env   # edit credentials if needed
 docker compose up -d
 ```
@@ -73,7 +73,7 @@ To edit the sidebar:
 ## File Structure
 
 ```
-meridian-wp-theme/          ← repo root
+meridian/               ← repo root (https://github.com/wpgenius/meridian)
 ├── .docker/
 │   └── uploads.ini         # PHP upload config for Docker
 ├── .github/

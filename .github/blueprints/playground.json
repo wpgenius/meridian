@@ -9,7 +9,7 @@
       "step": "installTheme",
       "themeZipFile": {
         "resource": "url",
-        "url": "https://github.com/mkrndmane/meridian-wp-theme/releases/latest/download/meridian-wp-theme.zip"
+        "url": "https://github.com/wpgenius/meridian/releases/latest/download/meridian.zip"
       },
       "options": {
         "activate": true
