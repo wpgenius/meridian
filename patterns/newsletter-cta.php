@@ -24,11 +24,11 @@ register_block_pattern(
 
 <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"style":{"spacing":{"blockGap":"var:preset|spacing|4","margin":{"top":"var:preset|spacing|4"}}}} -->
 <div class="wp-block-buttons">
-<!-- wp:button {"style":{"color":{"background":"#ffffff","text":"var(--wp--preset--color--primary)"}}} -->
-<div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#" style="color:var(--wp--preset--color--primary);background-color:#ffffff">Book a Discovery Call</a></div>
+<!-- wp:button {"backgroundColor":"white","textColor":"primary"} -->
+<div class="wp-block-button"><a class="wp-block-button__link wp-element-button has-primary-color has-text-color has-white-background-color" href="#">Book a Discovery Call</a></div>
 <!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline","style":{"color":{"text":"#ffffff"},"border":{"color":"rgba(255,255,255,0.6)"}}} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="color:#ffffff;border-color:rgba(255,255,255,0.6)">View My Work</a></div>
+<!-- wp:button {"className":"is-style-outline","textColor":"white"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button has-white-color has-text-color" href="#">View My Work</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
