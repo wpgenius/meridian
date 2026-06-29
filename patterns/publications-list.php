@@ -33,15 +33,15 @@ register_block_pattern(
 <p class="has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Book</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"neutral-900"} -->
-<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">Smart Sugar Control: An IntuiWell Guide</h4>
+<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">The Resilient Leader: A Framework for Sustainable High Performance</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
-<p class="has-neutral-600-color has-text-color has-sm-font-size">A Glycemic-Index Roadmap for Indian Meals — practical guidance for managing blood sugar through culturally relevant dietary choices.</p>
+<p class="has-neutral-600-color has-text-color has-sm-font-size">A practical guide for executives and founders on building mental clarity, managing stress, and sustaining peak performance through evidence-based leadership practices.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} -->
-<div class="wp-block-buttons">
+<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--3)">
 <!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"0.75rem"}}} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="font-size:0.75rem">View on Amazon →</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="font-size:0.75rem">View →</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->
@@ -55,18 +55,18 @@ register_block_pattern(
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group">
 <!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"xs","textColor":"neutral-400"} -->
-<p class="has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Book</p>
+<p class="has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Article</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"neutral-900"} -->
-<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">The Gut Reset</h4>
+<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">Why High Achievers Burn Out — and How to Build Back Stronger</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
-<p class="has-neutral-600-color has-text-color has-sm-font-size">A Practical Indian Roadmap to Bloating, Acidity, Constipation &amp; More — evidence-based strategies for digestive wellness using Indian dietary traditions.</p>
+<p class="has-neutral-600-color has-text-color has-sm-font-size">Published in Leadership Today — an in-depth exploration of the science behind executive burnout and the systems leaders can adopt to recover and thrive long-term.</p>
 <!-- /wp:paragraph -->
 <!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} -->
-<div class="wp-block-buttons">
+<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--3)">
 <!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"0.75rem"}}} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="font-size:0.75rem">View on Amazon →</a></div>
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="font-size:0.75rem">Read Article →</a></div>
 <!-- /wp:button -->
 </div>
 <!-- /wp:buttons -->

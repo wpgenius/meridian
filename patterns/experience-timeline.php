@@ -30,7 +30,7 @@ register_block_pattern(
 <!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|2"}},"layout":{"type":"flex","flexWrap":"wrap","verticalAlignment":"center","justifyContent":"space-between"}} -->
 <div class="wp-block-group">
 <!-- wp:heading {"level":3,"style":{"typography":{"fontWeight":"600"}},"fontSize":"lg","textColor":"neutral-900"} -->
-<h3 class="wp-block-heading has-neutral-900-color has-text-color has-lg-font-size" style="font-weight:600">Co-Founder &amp; COO/CPO</h3>
+<h3 class="wp-block-heading has-neutral-900-color has-text-color has-lg-font-size" style="font-weight:600">Co-Founder &amp; Chief Operating Officer</h3>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"xs","textColor":"neutral-400","style":{"typography":{"fontWeight":"500"}}} -->
 <p class="has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:500">2022 – Present</p>
@@ -38,10 +38,10 @@ register_block_pattern(
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"primary","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">IntuiWell</p>
+<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">Pinnacle Growth Co.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
-<p class="has-neutral-700-color has-text-color has-sm-font-size">Co-founded a comprehensive personal and professional development company focused on peak performance for high performers. Built proprietary frameworks including the Mind-Body Momentum Map and Resilience Loops.</p>
+<p class="has-neutral-700-color has-text-color has-sm-font-size">Co-founded a leadership development company focused on peak performance for executives and founders. Built proprietary coaching frameworks integrating organizational strategy with personal resilience practices.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -59,10 +59,10 @@ register_block_pattern(
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"primary","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">Mobifilia</p>
+<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">Streamline Technologies</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
-<p class="has-neutral-700-color has-text-color has-sm-font-size">Spearheaded organization-wide strategies that significantly increased operational efficiency, improved client satisfaction, and boosted eNPS score. Streamlined processes and set benchmarks for operational excellence.</p>
+<p class="has-neutral-700-color has-text-color has-sm-font-size">Spearheaded organization-wide strategies that significantly increased operational efficiency, improved client satisfaction, and boosted employee engagement scores. Streamlined processes and set benchmarks for operational excellence.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
@@ -80,10 +80,10 @@ register_block_pattern(
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"primary","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">Previous Company</p>
+<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">Nexus Digital Partners</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
-<p class="has-neutral-700-color has-text-color has-sm-font-size">Managed client accounts across diverse industries, ensuring 100% project delivery. Directed product development that attracted $2M post-MVP investment. Drove business growth through productizing services.</p>
+<p class="has-neutral-700-color has-text-color has-sm-font-size">Managed client accounts across diverse industries, ensuring 100% on-time project delivery. Directed product development that attracted $2M post-MVP investment. Drove business growth through productizing services and expanding key accounts.</p>
 <!-- /wp:paragraph -->
 </div>
 <!-- /wp:group -->
