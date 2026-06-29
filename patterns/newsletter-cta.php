@@ -27,7 +27,7 @@ register_block_pattern(
 <!-- wp:button {"style":{"color":{"background":"#ffffff","text":"var(--wp--preset--color--primary)"}}} -->
 <div class="wp-block-button"><a class="wp-block-button__link wp-element-button" href="#" style="color:var(--wp--preset--color--primary);background-color:#ffffff">Book a Discovery Call</a></div>
 <!-- /wp:button -->
-<!-- wp:button {"className":"is-style-outline","style":{"color":{"text":"#ffffff"},"border":{"color":"rgba(255,255,255,0.6)","style":"solid","width":"1px"}}} -->
+<!-- wp:button {"className":"is-style-outline","style":{"color":{"text":"#ffffff"},"border":{"color":"rgba(255,255,255,0.6)"}}} -->
 <div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="color:#ffffff;border-color:rgba(255,255,255,0.6)">View My Work</a></div>
 <!-- /wp:button -->
 </div>
