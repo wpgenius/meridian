@@ -37,11 +37,11 @@ register_block_pattern(
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"fontSize":"sm","textColor":"primary","style":{"typography":{"fontWeight":"500"}}} -->
-<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:500">Community Venture Accelerator &mdash; New Founders Program</p>
+<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:500">IDFC Junoon Program &mdash; Lighthouse Communities &amp; Dheya Career Mentors</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
-<p class="has-neutral-700-color has-text-color has-sm-font-size">Mentored 8 self-funded entrepreneurs over 12 months. Two participants grew their revenue by 1.5x within six months of the program. Conducted workshops on business fundamentals, financial planning, and sustainable growth strategies.</p>
+<p class="has-neutral-700-color has-text-color has-sm-font-size">Mentored 8 self-funded entrepreneurs under the Entrepreneurship Development Program. 2 of the 8 candidates grew their revenue by 1.5x in 6 months. Conducted business basics sessions to help program candidates run small businesses in a formal and structured manner.</p>
 <!-- /wp:paragraph -->
 
 </div>
