@@ -27,7 +27,7 @@ register_block_pattern(
 
 <!-- wp:column -->
 <div class="wp-block-column">
-<!-- wp:group {"className":"talk-card","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"blockGap":"var:preset|spacing|4"},"overflow":"hidden"},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
+<!-- wp:group {"className":"talk-card","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"blockGap":"var:preset|spacing|4"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group talk-card has-white-background-color has-background" style="border-radius:8px;border:1px solid var(--wp--preset--color--neutral-200);overflow:hidden">
 <!-- wp:embed {"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">
@@ -51,7 +51,7 @@ https://www.youtube.com/watch?v=dQw4w9WgXcQ
 
 <!-- wp:column -->
 <div class="wp-block-column">
-<!-- wp:group {"className":"talk-card","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"blockGap":"var:preset|spacing|4"},"overflow":"hidden"},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
+<!-- wp:group {"className":"talk-card","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"blockGap":"var:preset|spacing|4"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
 <div class="wp-block-group talk-card has-white-background-color has-background" style="border-radius:8px;border:1px solid var(--wp--preset--color--neutral-200);overflow:hidden">
 <!-- wp:embed {"url":"https://www.youtube.com/watch?v=dQw4w9WgXcQ","type":"video","providerNameSlug":"youtube","responsive":true,"className":"wp-embed-aspect-16-9 wp-has-aspect-ratio"} -->
 <figure class="wp-block-embed is-type-video is-provider-youtube wp-block-embed-youtube wp-embed-aspect-16-9 wp-has-aspect-ratio"><div class="wp-block-embed__wrapper">

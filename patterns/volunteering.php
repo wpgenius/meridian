@@ -37,7 +37,7 @@ register_block_pattern(
 <!-- /wp:group -->
 
 <!-- wp:paragraph {"fontSize":"sm","textColor":"primary","style":{"typography":{"fontWeight":"500"}}} -->
-<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:500">IDFC Junoon Program &mdash; Lighthouse Communities &amp; Dheya Career Mentors</p>
+<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:500">Growth Catalyst Program &mdash; Community Learning Network &amp; Career Pathways Foundation</p>
 <!-- /wp:paragraph -->
 
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->

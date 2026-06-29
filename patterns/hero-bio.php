@@ -31,7 +31,7 @@ register_block_pattern(
 <div class="wp-block-column">
 
 <!-- wp:heading {"level":1,"style":{"typography":{"fontWeight":"800"}},"fontSize":"4xl","textColor":"neutral-900"} -->
-<h1 class="wp-block-heading has-neutral-900-color has-text-color has-4-xl-font-size" style="font-weight:800">Your Name</h1>
+<h1 class="wp-block-heading has-neutral-900-color has-text-color has-4-xl-font-size" style="font-weight:800">Alex Morgan</h1>
 <!-- /wp:heading -->
 
 <!-- wp:paragraph {"fontSize":"xl","textColor":"primary","style":{"typography":{"fontWeight":"600"}}} -->

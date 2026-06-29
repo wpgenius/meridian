@@ -33,7 +33,7 @@ register_block_pattern(
 <p class="has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Book</p>
 <!-- /wp:paragraph -->
 <!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"neutral-900"} -->
-<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">Smart Sugar Control: An IntuiWell Guide</h4>
+<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">Smart Sugar Control: A Wellness Guide</h4>
 <!-- /wp:heading -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
 <p class="has-neutral-600-color has-text-color has-sm-font-size">A Glycemic-Index Roadmap for Indian Meals — practical guidance for managing blood sugar through culturally relevant dietary choices.</p>

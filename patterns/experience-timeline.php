@@ -38,7 +38,7 @@ register_block_pattern(
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"primary","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">IntuiWell</p>
+<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">PeakPath Co.</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
 <p class="has-neutral-700-color has-text-color has-sm-font-size">Co-founded a comprehensive personal and professional development company focused on peak performance for high performers. Built proprietary frameworks including the Mind-Body Momentum Map and Resilience Loops.</p>
@@ -59,7 +59,7 @@ register_block_pattern(
 </div>
 <!-- /wp:group -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"primary","style":{"typography":{"fontWeight":"600"}}} -->
-<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">Mobifilia</p>
+<p class="has-primary-color has-text-color has-sm-font-size" style="font-weight:600">Apex Digital Group</p>
 <!-- /wp:paragraph -->
 <!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-700"} -->
 <p class="has-neutral-700-color has-text-color has-sm-font-size">Spearheaded organization-wide strategies that significantly increased operational efficiency, improved client satisfaction, and boosted eNPS score. Streamlined processes and set benchmarks for operational excellence.</p>
