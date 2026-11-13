@@ -45,22 +45,22 @@ PRs are reviewed by the maintainer. Small focused changes are easier to review a
 ### PHP
 
 - Follow the [WordPress PHP Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/php/).
-- All functions, hooks, and globals must use the `mrdn_` prefix.
+- All functions, hooks, and globals must use the `meridian_` prefix.
 - No shortcodes, custom post types, or custom blocks — core blocks only.
 - Escape all output: `esc_html__()`, `esc_attr__()`, `esc_url()`, `wp_kses_post()`.
-- Never use `exit` or `die` outside the ABSPATH guard at the top of `functions.php`.
 
 ### Block Patterns (`patterns/*.php`)
 
-- Register via `register_block_pattern()` inside a plain PHP file — no class wrappers.
+- Register with a file header (`Title`, `Slug`, `Categories`, optional `Keywords`, `Description`); WordPress loads `patterns/*.php` automatically. Use `Inserter: no` for patterns that only hold template content (`hidden-*.php`).
 - Use theme preset references (`var:preset|color|primary`, `var:preset|spacing|6`) — never hardcode hex values or pixel sizes that duplicate `theme.json` tokens.
 - Remove `id` attributes from image blocks and `queryId` from query blocks before committing.
 - Internationalize all user-visible strings with `esc_html__()` or `esc_html_x()`.
-- Assign patterns to the appropriate category: `mrdn-hero` for hero/profile sections, `mrdn-content` for everything else.
+- Assign patterns to the appropriate category: `meridian-hero` for hero/profile sections, `meridian-content` for everything else.
+- Validate block markup before committing: copy the pattern into the editor and make sure no block shows "unexpected or invalid content".
 
 ### Templates & Template Parts (`templates/*.html`, `parts/*.html`)
 
-- Pure block markup — no PHP, no inline scripts.
+- Pure block markup — no PHP, no inline scripts. Put any user-facing text in a hidden pattern and reference it with `<!-- wp:pattern {"slug":"meridian/hidden-…"} /-->` so it can be translated.
 - All spacing, color, and typography values must reference `theme.json` presets via `var:preset|…` notation.
 - Remove the `theme` attribute from `wp:template-part` references before committing (e.g. use `{"slug":"header"}` not `{"slug":"header","theme":"meridian"}`).
 
@@ -70,12 +70,13 @@ PRs are reviewed by the maintainer. Small focused changes are easier to review a
 - Font sizes must include a `fluid` range for sizes `lg` and above.
 - New block style overrides go in `styles.blocks`, not in CSS, unless a CSS selector is unavoidable.
 
-### CSS (`assets/css/global.css`, `assets/css/editor.css`)
+### CSS (`assets/css/theme.css`)
 
 - Follow the [WordPress CSS Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/css/).
 - Use `var(--wp--preset--…)` custom properties — never hardcode colors, font families, or spacing values that exist as `theme.json` presets.
-- Scope component styles to their BEM class (`.post-card`, `.timeline-item`, etc.) rather than generic element selectors.
-- Add new sections with a matching comment header (see the existing section pattern in `global.css`).
+- `theme.css` loads on the front end and in the editor; keep it limited to what `theme.json` cannot express.
+- Scope component styles to `meridian-` classes (`.meridian-card`, `.meridian-timeline__item`, etc.) rather than generic element selectors.
+- Use logical properties (`border-inline-start`, `padding-inline-end`) so RTL works without overrides, and avoid `!important`.
 
 ---
 

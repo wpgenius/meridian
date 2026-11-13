@@ -1,23 +1,18 @@
-Google Fonts
-============
+Bundled fonts
+=============
 
-Meridian loads fonts from Google Fonts. No local font files are needed.
+Meridian ships its fonts locally (no requests to third-party servers).
+They are registered in theme.json through fontFace entries.
 
-Fonts used:
-- Inter (weights 400, 500, 600, 700) — body text, UI elements
-- DM Serif Display (400, 400 italic) — available for headings/display use
+Inter (variable, weights 100–900)
+- inter-latin-wght-normal.woff2, inter-latin-ext-wght-normal.woff2
+- Copyright 2016 The Inter Project Authors (https://github.com/rsms/inter)
+- License: SIL Open Font License 1.1 (see inter-OFL.txt)
 
-Both fonts are loaded via the Google Fonts CDN in functions.php and
-registered in theme.json via fontFace src URLs pointing to fonts.gstatic.com.
+DM Serif Display (400 regular and italic)
+- dm-serif-display-latin-400-*.woff2, dm-serif-display-latin-ext-400-*.woff2
+- Copyright 2014-2017 Adobe Systems Incorporated, Copyright 2019 Google LLC
+- License: SIL Open Font License 1.1 (see dm-serif-display-OFL.txt)
 
-Licenses:
-- Inter: SIL Open Font License 1.1
-  https://fonts.google.com/specimen/Inter/about
-  https://scripts.sil.org/OFL
-
-- DM Serif Display: SIL Open Font License 1.1
-  https://fonts.google.com/specimen/DM+Serif+Display/about
-  https://scripts.sil.org/OFL
-
-Per WordPress.org theme review guidelines, Google Fonts is the only
-allowed remote resource exception. All other resources must be bundled.
+The .woff2 files are the Latin and Latin Extended subsets published by
+Fontsource (https://fontsource.org), version 5.1.0.

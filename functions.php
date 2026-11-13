@@ -2,94 +2,58 @@
 /**
  * Meridian functions and definitions.
  *
- * @package meridian
+ * @package Meridian
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-define( 'MRDN_VERSION', '1.0.0' );
-
-/**
- * Sets up theme defaults and registers support for WordPress features.
- */
-function mrdn_setup() {
-	load_theme_textdomain( 'meridian', get_template_directory() . '/languages' );
-
-	add_theme_support( 'automatic-feed-links' );
-	add_theme_support( 'title-tag' );
-	add_theme_support( 'post-thumbnails' );
-	add_theme_support( 'responsive-embeds' );
-	add_theme_support( 'editor-styles' );
-	add_theme_support( 'wp-block-styles' );
-	add_theme_support(
-		'html5',
-		array(
-			'search-form',
-			'comment-form',
-			'comment-list',
-			'gallery',
-			'caption',
-			'style',
-			'script',
-		)
-	);
-
-	add_editor_style( 'assets/css/editor.css' );
-}
-add_action( 'after_setup_theme', 'mrdn_setup' );
-
-/**
- * Enqueue theme styles.
- * Fonts are declared in theme.json fontFace entries — no separate PHP enqueue needed.
- */
-function mrdn_enqueue_assets() {
-	wp_enqueue_style(
-		'meridian-style',
-		get_stylesheet_uri(),
-		array(),
-		MRDN_VERSION
-	);
-
-	wp_enqueue_style(
-		'meridian-global',
-		get_template_directory_uri() . '/assets/css/global.css',
-		array( 'meridian-style' ),
-		MRDN_VERSION
-	);
-}
-add_action( 'wp_enqueue_scripts', 'mrdn_enqueue_assets' );
-
-/**
- * Register block patterns categories.
- */
-function mrdn_register_pattern_categories() {
-	if ( ! function_exists( 'register_block_pattern_category' ) ) {
-		return;
+if ( ! function_exists( 'meridian_setup' ) ) :
+	/**
+	 * Sets up theme defaults and registers support for WordPress features.
+	 *
+	 * Block themes get most theme supports automatically, so only the
+	 * opinionated core block styles and the shared stylesheet are added here.
+	 */
+	function meridian_setup() {
+		add_theme_support( 'wp-block-styles' );
+		add_editor_style( 'assets/css/theme.css' );
 	}
+endif;
+add_action( 'after_setup_theme', 'meridian_setup' );
 
-	register_block_pattern_category(
-		'mrdn-patterns',
-		array( 'label' => esc_html__( 'Meridian', 'meridian' ) )
-	);
+if ( ! function_exists( 'meridian_enqueue_styles' ) ) :
+	/**
+	 * Enqueues the theme stylesheet on the front end.
+	 */
+	function meridian_enqueue_styles() {
+		wp_enqueue_style(
+			'meridian-style',
+			get_template_directory_uri() . '/assets/css/theme.css',
+			array(),
+			wp_get_theme()->get( 'Version' )
+		);
+	}
+endif;
+add_action( 'wp_enqueue_scripts', 'meridian_enqueue_styles' );
 
-	register_block_pattern_category(
-		'mrdn-hero',
-		array( 'label' => esc_html__( 'Meridian: Hero & Bio', 'meridian' ) )
-	);
+if ( ! function_exists( 'meridian_register_pattern_categories' ) ) :
+	/**
+	 * Registers the block pattern categories used by the theme's patterns.
+	 */
+	function meridian_register_pattern_categories() {
+		register_block_pattern_category(
+			'meridian-hero',
+			array(
+				'label'       => _x( 'Meridian: Hero & Bio', 'Block pattern category', 'meridian' ),
+				'description' => __( 'Profile introductions and hero sections.', 'meridian' ),
+			)
+		);
 
-	register_block_pattern_category(
-		'mrdn-content',
-		array( 'label' => esc_html__( 'Meridian: Content', 'meridian' ) )
-	);
-}
-add_action( 'init', 'mrdn_register_pattern_categories' );
-
-/**
- * Set the content width.
- */
-function mrdn_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'mrdn_content_width', 760 );
-}
-add_action( 'after_setup_theme', 'mrdn_content_width', 0 );
+		register_block_pattern_category(
+			'meridian-content',
+			array(
+				'label'       => _x( 'Meridian: Content', 'Block pattern category', 'meridian' ),
+				'description' => __( 'Sections for experience, expertise, talks, publications and more.', 'meridian' ),
+			)
+		);
+	}
+endif;
+add_action( 'init', 'meridian_register_pattern_categories' );
