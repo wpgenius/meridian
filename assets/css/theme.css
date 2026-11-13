@@ -1,0 +1,152 @@
+/**
+ * Meridian theme styles.
+ *
+ * Most styling lives in theme.json. This file only covers what theme.json
+ * cannot express: sticky positioning, hover effects and decorative details.
+ * It is loaded on the front end and in the editor.
+ *
+ * @package Meridian
+ */
+
+/* Focus indicator for keyboard users */
+:where(a, button, input, select, textarea, summary):focus-visible {
+	outline: 2px solid var(--wp--preset--color--primary);
+	outline-offset: 3px;
+}
+
+/* Header: sticky with a translucent background */
+.wp-site-blocks > header.wp-block-template-part {
+	position: sticky;
+	top: var(--wp-admin--admin-bar--height, 0px);
+	z-index: 100;
+}
+
+.site-header {
+	background-color: rgb(249 248 245 / 88%);
+	backdrop-filter: blur(14px);
+	-webkit-backdrop-filter: blur(14px);
+	border-block-end: 1px solid rgb(0 0 0 / 6%);
+}
+
+.site-header a {
+	text-decoration: none;
+}
+
+/* Two-column layout: sticky sidebar on wide screens */
+@media (min-width: 782px) {
+	.site-layout__sidebar {
+		position: sticky;
+		top: calc(var(--wp-admin--admin-bar--height, 0px) + 6rem);
+		align-self: flex-start;
+	}
+
+	.site-sidebar {
+		border-inline-end: 1px solid var(--wp--preset--color--neutral-200);
+		padding-inline-end: var(--wp--preset--spacing--8);
+	}
+}
+
+@media (max-width: 781px) {
+	.site-sidebar {
+		border-block-end: 1px solid var(--wp--preset--color--neutral-200);
+	}
+}
+
+/* Cards */
+.meridian-card,
+.meridian-accent-card {
+	transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.meridian-card {
+	box-shadow: var(--wp--preset--shadow--sm);
+	overflow: hidden;
+}
+
+.meridian-card:hover {
+	box-shadow: var(--wp--preset--shadow--lg);
+	transform: translateY(-2px);
+}
+
+.meridian-accent-card {
+	border: 1px solid var(--wp--preset--color--neutral-200);
+	border-inline-start: 3px solid var(--wp--preset--color--primary);
+	border-start-end-radius: 8px;
+	border-end-end-radius: 8px;
+}
+
+.meridian-accent-card--secondary {
+	border-inline-start-color: var(--wp--preset--color--secondary);
+}
+
+.meridian-accent-card:hover {
+	box-shadow: var(--wp--preset--shadow--md);
+}
+
+/* Experience timeline */
+.meridian-timeline__item {
+	position: relative;
+	border-inline-start: 3px solid var(--wp--preset--color--neutral-200);
+	padding-inline-start: var(--wp--preset--spacing--6);
+}
+
+.meridian-timeline__item:first-child {
+	border-inline-start-color: var(--wp--preset--color--primary);
+}
+
+.meridian-timeline__item::before {
+	content: "";
+	position: absolute;
+	inset-inline-start: -8px;
+	top: 0.35rem;
+	width: 13px;
+	height: 13px;
+	border-radius: 50%;
+	background-color: var(--wp--preset--color--primary);
+	box-shadow: 0 0 0 3px var(--wp--preset--color--base);
+}
+
+/* Current navigation item */
+.wp-block-navigation .current-menu-item > a {
+	color: var(--wp--preset--color--primary);
+	font-weight: 600;
+}
+
+/* Pagination */
+.wp-block-query-pagination-numbers .page-numbers {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 2.25rem;
+	height: 2.25rem;
+	padding: 0 0.5rem;
+	border: 1px solid var(--wp--preset--color--neutral-200);
+	border-radius: 6px;
+	text-decoration: none;
+}
+
+.wp-block-query-pagination-numbers .page-numbers.current,
+.wp-block-query-pagination-numbers a.page-numbers:hover {
+	background-color: var(--wp--preset--color--primary);
+	border-color: var(--wp--preset--color--primary);
+	color: var(--wp--preset--color--white);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.meridian-card,
+	.meridian-accent-card {
+		transition: none;
+	}
+
+	.meridian-card:hover {
+		transform: none;
+	}
+}
+
+/* Short accent rule under section headings */
+.wp-block-separator.meridian-accent-rule {
+	width: 60px;
+	height: 3px;
+	border: 0;
+	margin-inline: 0;
+}

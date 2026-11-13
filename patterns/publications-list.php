@@ -1,84 +1,57 @@
 <?php
 /**
- * Publications List pattern.
+ * Title: Publications List
+ * Slug: meridian/publications-list
+ * Categories: meridian-content
+ * Keywords: books, articles, publications, writing
+ * Description: Stacked list of books or articles with a type label, title, summary and link button.
  *
- * @package meridian
+ * @package Meridian
  */
 
-register_block_pattern(
-	'meridian/publications-list',
+$meridian_publications = array(
 	array(
-		'title'       => __( 'Publications List', 'meridian' ),
-		'description' => __( 'A styled list of books, articles, and publications.', 'meridian' ),
-		'categories'  => array( 'mrdn-content' ),
-		'content'     => '<!-- wp:group {"className":"publications-section","style":{"spacing":{"blockGap":"var:preset|spacing|8","padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group publications-section">
-
-<!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700"}},"fontSize":"3xl","textColor":"neutral-900"} -->
-<h2 class="wp-block-heading has-neutral-900-color has-text-color has-3-xl-font-size" style="font-weight:700">Publications</h2>
-<!-- /wp:heading -->
-
-<!-- wp:separator {"style":{"color":{"background":"var:preset|color|primary"},"layout":{"selfStretch":"fixed","flexSize":"60px"}}} -->
-<hr class="wp-block-separator has-primary-background-color has-background" style="width:60px"/>
-<!-- /wp:separator -->
-
-<!-- wp:group {"className":"publications-list","style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group publications-list">
-
-<!-- wp:group {"className":"publication-item","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"padding":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|5","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|2"}},"backgroundColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group publication-item has-white-background-color has-background" style="border-radius:8px;border:1px solid var(--wp--preset--color--neutral-200)">
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group">
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"xs","textColor":"neutral-400"} -->
-<p class="has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Book</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"neutral-900"} -->
-<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">Smart Sugar Control: An IntuiWell Guide</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
-<p class="has-neutral-600-color has-text-color has-sm-font-size">A Glycemic-Index Roadmap for Indian Meals — practical guidance for managing blood sugar through culturally relevant dietary choices.</p>
-<!-- /wp:paragraph -->
-<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} -->
-<div class="wp-block-buttons">
-<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"0.75rem"}}} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="font-size:0.75rem">View on Amazon →</a></div>
-<!-- /wp:button -->
-</div>
-<!-- /wp:buttons -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-
-<!-- wp:group {"className":"publication-item","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"padding":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|5","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|2"}},"backgroundColor":"white","layout":{"type":"flex","flexWrap":"nowrap","verticalAlignment":"top"}} -->
-<div class="wp-block-group publication-item has-white-background-color has-background" style="border-radius:8px;border:1px solid var(--wp--preset--color--neutral-200)">
-<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|1"}},"layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group">
-<!-- wp:paragraph {"style":{"typography":{"fontWeight":"600"}},"fontSize":"xs","textColor":"neutral-400"} -->
-<p class="has-neutral-400-color has-text-color has-xs-font-size" style="font-weight:600;text-transform:uppercase;letter-spacing:0.06em">Book</p>
-<!-- /wp:paragraph -->
-<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"neutral-900"} -->
-<h4 class="wp-block-heading has-neutral-900-color has-text-color has-md-font-size" style="font-weight:600">The Gut Reset</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
-<p class="has-neutral-600-color has-text-color has-sm-font-size">A Practical Indian Roadmap to Bloating, Acidity, Constipation &amp; More — evidence-based strategies for digestive wellness using Indian dietary traditions.</p>
-<!-- /wp:paragraph -->
-<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|3"}}}} -->
-<div class="wp-block-buttons">
-<!-- wp:button {"className":"is-style-outline","style":{"typography":{"fontSize":"0.75rem"}}} -->
-<div class="wp-block-button is-style-outline"><a class="wp-block-button__link wp-element-button" href="#" style="font-size:0.75rem">View on Amazon →</a></div>
-<!-- /wp:button -->
-</div>
-<!-- /wp:buttons -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:group -->
-
-</div>
-<!-- /wp:group -->
-
-</div>
-<!-- /wp:group -->',
-	)
+		'type'    => __( 'Book', 'meridian' ),
+		'title'   => __( 'Title of Your Book', 'meridian' ),
+		'summary' => __( 'A one-sentence summary of the book and the reader it is written for.', 'meridian' ),
+	),
+	array(
+		'type'    => __( 'Article', 'meridian' ),
+		'title'   => __( 'Title of Your Article', 'meridian' ),
+		'summary' => __( 'Where it was published and the main idea it explores.', 'meridian' ),
+	),
 );
+?>
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|8","padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:heading -->
+<h2 class="wp-block-heading"><?php esc_html_e( 'Publications', 'meridian' ); ?></h2>
+<!-- /wp:heading -->
+
+<!-- wp:separator {"className":"meridian-accent-rule","backgroundColor":"primary"} -->
+<hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background meridian-accent-rule"/>
+<!-- /wp:separator --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|5"}},"layout":{"type":"flex","orientation":"vertical","justifyContent":"stretch"}} -->
+<div class="wp-block-group"><?php foreach ( $meridian_publications as $meridian_publication ) : ?><!-- wp:group {"className":"meridian-accent-card","style":{"spacing":{"padding":{"top":"var:preset|spacing|5","bottom":"var:preset|spacing|5","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|2"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group meridian-accent-card has-white-background-color has-background" style="padding-top:var(--wp--preset--spacing--5);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--5);padding-left:var(--wp--preset--spacing--6)"><!-- wp:paragraph {"style":{"typography":{"fontWeight":"600","textTransform":"uppercase","letterSpacing":"0.06em"}},"textColor":"neutral-600","fontSize":"xs"} -->
+<p class="has-neutral-600-color has-text-color has-xs-font-size" style="font-weight:600;letter-spacing:0.06em;text-transform:uppercase"><?php echo esc_html( $meridian_publication['type'] ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading {"level":3,"fontSize":"md"} -->
+<h3 class="wp-block-heading has-md-font-size"><?php echo esc_html( $meridian_publication['title'] ); ?></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"neutral-600","fontSize":"sm"} -->
+<p class="has-neutral-600-color has-text-color has-sm-font-size"><?php echo esc_html( $meridian_publication['summary'] ); ?></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:buttons {"style":{"spacing":{"margin":{"top":"var:preset|spacing|2"}}}} -->
+<div class="wp-block-buttons" style="margin-top:var(--wp--preset--spacing--2)"><!-- wp:button {"className":"is-style-outline","fontSize":"xs"} -->
+<div class="wp-block-button is-style-outline"><a class="wp-block-button__link has-xs-font-size has-custom-font-size wp-element-button"><?php esc_html_e( 'Read more', 'meridian' ); ?></a></div>
+<!-- /wp:button --></div>
+<!-- /wp:buttons --></div>
+<!-- /wp:group --><?php endforeach; ?></div>
+<!-- /wp:group --></div>
+<!-- /wp:group -->

@@ -6,17 +6,17 @@ A clean, professional personal brand block theme for thought leaders, coaches, a
 
 ## Features
 
-- **Two-column layout** with sticky sidebar (profile photo, bio, social links, newsletter opt-in)
-- **6 block patterns** ready to use: Hero Bio, Expertise Grid, Experience Timeline, Talks Grid, Publications List, Newsletter CTA
-- **6 page templates**: Index, Single Post, Page, Archive, Search, 404 — plus No Sidebar and Full Width variants
-- **Professional design system** — Inter font, 8px spacing scale, full color ramps (primary, secondary, accent, success, warning, error + neutrals)
+- **Two-column layout** with a sticky profile sidebar (logo, site title, tagline, bio, social links)
+- **7 block patterns** ready to use: Hero Bio, Expertise Grid, Experience Timeline, Talks & Speaking, Publications List, Volunteering, Work With Me CTA
+- **Templates**: Blog, Single Post, Page, Archive, Search, 404 — plus Landing Page (no title), No Sidebar and Full Width page templates
+- **Professional design system** — bundled Inter and DM Serif Display fonts, 8px spacing scale, full color ramps (primary, secondary, accent, success, warning, error + neutrals)
 - **Full Site Editing** — works entirely in the WordPress Site Editor, no page builder required
-- **Accessibility-ready** — skip links, keyboard navigation, WCAG AA contrast
+- **Accessible** — core skip link, visible focus styles, AA-contrast text colors
 - **Translation-ready** — includes `.pot` file in `/languages`
 
 ## Requirements
 
-- WordPress 6.4 or higher
+- WordPress 6.6 or higher
 - PHP 7.4 or higher
 
 ## Installation
@@ -38,23 +38,22 @@ git clone https://github.com/wpgenius/meridian.git wp-content/themes/meridian
 ```bash
 git clone https://github.com/wpgenius/meridian.git
 cd meridian
-cp .env.example .env   # edit credentials if needed
 docker compose up -d
 ```
 WordPress runs at `http://localhost:8080`. The repo root mounts live into the container as the theme — no restart needed when you edit theme files.
 
 Activate the theme from **Appearance > Themes** in either case.
 
-## Font Setup
+## Fonts
 
-Meridian uses **Google Fonts** — no local font files needed.
+Fonts are bundled in `assets/fonts/` and registered through `fontFace` entries in `theme.json`, so no requests go to third-party font servers (a WordPress.org requirement).
 
 | Font | Weights | Use |
 |------|---------|-----|
-| [Inter](https://fonts.google.com/specimen/Inter) | 400, 500, 600, 700 | Body text, UI, navigation |
-| [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display) | 400, 400i | Optional headings / display |
+| [Inter](https://github.com/rsms/inter) | Variable 100–900 | Body text, UI, navigation |
+| [DM Serif Display](https://fonts.google.com/specimen/DM+Serif+Display) | 400, 400 italic | H1, H2 and post titles |
 
-Both are declared via `fontFace` entries in `theme.json` with Google Fonts CDN `src` URLs — WordPress 6.x generates the `@font-face` CSS automatically. No PHP enqueue and no local downloads required.
+Both are SIL Open Font License 1.1; license texts sit next to the font files.
 
 ## Customization
 
@@ -66,82 +65,50 @@ All design tokens (colors, typography, spacing) are in `theme.json`. To customiz
 
 To edit the sidebar:
 
-1. Go to **Appearance > Editor > Template Parts > Sidebar**
-2. Update your profile photo, name, bio, and social links
+1. Go to **Appearance > Editor > Patterns > Template Parts > Sidebar**
+2. Update your bio and social links (logo, title and tagline come from site settings)
 
 ## File Structure
 
 ```
 meridian/                   ← repo root = the theme (https://github.com/wpgenius/meridian)
-├── .docker/
-│   └── uploads.ini         # PHP upload config for Docker
-├── .github/
-│   ├── blueprints/
-│   │   └── playground.json # WordPress Playground live preview config
-│   └── workflows/
-│       └── release.yml     # Builds & publishes release zip on tag
+├── .docker/uploads.ini     # PHP upload config for Docker
+├── .github/                # Playground blueprint + release workflow
 ├── assets/
-│   ├── css/
-│   │   ├── global.css      # Front-end styles
-│   │   └── editor.css      # Editor WYSIWYG styles
-│   └── fonts/
-│       └── README.txt      # Font download instructions
-├── languages/
-│   └── meridian.pot        # Translation template
-├── parts/
-│   ├── header.html
-│   ├── footer.html
-│   └── sidebar.html
+│   ├── css/theme.css       # Styles theme.json can't express (front end + editor)
+│   ├── fonts/              # Bundled Inter + DM Serif Display (OFL)
+│   └── images/             # Avatar placeholder used in patterns
+├── languages/meridian.pot  # Translation template (wp i18n make-pot)
+├── parts/                  # header, footer, sidebar (footer/sidebar load hidden patterns)
 ├── patterns/
-│   ├── hero-bio.php
-│   ├── expertise-grid.php
-│   ├── experience-timeline.php
-│   ├── talks-grid.php
-│   ├── publications-list.php
-│   ├── newsletter-cta.php
-│   └── volunteering.php
-├── styles/                 # JSON style variations (Site Editor palette swaps)
-├── templates/
-│   ├── index.html          # Main blog index
-│   ├── front-page.html     # Static homepage (profile content)
-│   ├── single.html         # Single post
-│   ├── page.html           # Static page
-│   ├── archive.html        # Category/tag archives
-│   ├── search.html         # Search results
-│   ├── 404.html            # Not found
-│   ├── no-sidebar.html     # Page without sidebar
-│   └── full-width.html     # Full-width page
-├── .distignore             # Files excluded from release zip
-├── .editorconfig
-├── .gitattributes
-├── CHANGELOG.md
-├── CONTRIBUTING.md
-├── CONTRIBUTORS.md
-├── docker-compose.yml
+│   ├── hero-bio.php, expertise-grid.php, experience-timeline.php,
+│   │   talks-grid.php, publications-list.php, volunteering.php,
+│   │   call-to-action.php  # Inserter patterns
+│   └── hidden-*.php        # Translatable template content (404, footer, loops…)
+├── styles/                 # Style variations (none yet)
+├── templates/              # index, single, page, archive, search, 404,
+│                           # page-landing, no-sidebar, full-width
 ├── functions.php
-├── index.php
 ├── readme.txt              # WordPress.org readme
-├── screenshot.png          # Theme preview (1200x900)
+├── screenshot.png          # Theme preview (1200×900)
 ├── style.css               # Theme header
-└── theme.json              # Design tokens
+└── theme.json              # Design tokens and block styles
 ```
 
 ## WordPress.org Submission Checklist
 
-- [x] GPLv2 or later license
-- [x] `readme.txt` in WordPress.org format
-- [x] All required `style.css` headers (Author: mkrndmane)
-- [x] `theme.json` version 3
-- [x] `templates/index.html`
-- [x] Unique prefix `mrdn_` for all PHP identifiers
-- [x] No custom post types, blocks, or shortcodes
-- [x] Skip links and keyboard navigation
-- [x] Translation-ready with `.pot` file
-- [x] No forbidden files (`.sql`, `.xml`, `.sh`, etc.)
-- [x] Google Fonts declared via `theme.json` `fontFace` entries (no PHP enqueue needed)
-- [ ] Create `screenshot.png` at 1200×900px
-- [ ] Run Theme Check plugin — resolve all errors/warnings
-- [ ] Test on latest WordPress with default content (Theme Unit Test data)
+- [x] GPLv2 or later license; all bundled assets GPL-compatible
+- [x] `readme.txt` in WordPress.org format with Resources section
+- [x] `theme.json` version 3 (requires WordPress 6.6)
+- [x] Fonts bundled locally — no third-party requests
+- [x] All user-facing strings translatable; template text lives in patterns
+- [x] Unique `meridian_` prefix for PHP functions
+- [x] No custom post types, blocks or shortcodes
+- [x] `screenshot.png` at 1200×900, created from the theme itself
+- [x] All patterns, templates and parts pass block validation
+- [ ] Run the Theme Check plugin — resolve all errors/warnings
+- [ ] Test with the Theme Unit Test data
+- [ ] Confirm the name "Meridian" is free on WordPress.org
 - [ ] Submit at https://wordpress.org/themes/upload/
 
 ## Changelog
@@ -152,4 +119,4 @@ See [CHANGELOG.md](CHANGELOG.md) for the full version history.
 
 Meridian is licensed under the [GNU General Public License v2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
-Inter font: SIL Open Font License 1.1 — https://rsms.me/inter/
+Inter and DM Serif Display fonts: SIL Open Font License 1.1 — see `assets/fonts/`.

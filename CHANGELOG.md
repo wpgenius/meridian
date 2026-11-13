@@ -9,6 +9,17 @@ Versions correspond to tags in this repository and to releases on WordPress.org.
 
 ## [Unreleased]
 
+### WordPress.org readiness (#8)
+- Fonts are now bundled in `assets/fonts/` instead of loading from `fonts.gstatic.com`; the old DM Serif Display URLs returned 404
+- Patterns use file-header registration and translatable strings; demo content replaced with generic placeholders; hidden patterns hold template text
+- Fixed font-size presets (`--3xl` → `--3-xl`), which left H1/H2/H3 and post titles unstyled
+- Replaced `front-page.html` (blank when the homepage shows latest posts) with a selectable "Landing Page (no title)" template
+- Blog index query now inherits the main query; removed hard-coded `theme` attributes, nested `<header>`/`<footer>` elements and static layout classes that broke block validation
+- Merged `global.css` and `editor.css` into `assets/css/theme.css`, removed every `!important`, switched to logical properties for RTL
+- Raised "Requires at least" to 6.6 (needed for `theme.json` v3), "Tested up to" 7.1; `left-sidebar` tag replaces `right-sidebar`; dropped `accessibility-ready`
+- Added `screenshot.png` and an original avatar placeholder; text colors raised to AA contrast
+- Removed unneeded theme supports, renamed the PHP prefix to `meridian_`, and regenerated `languages/meridian.pot`
+
 ### Added
 - `templates/front-page.html` — dedicated static front page template using the 30/70 sidebar layout
 - Blueprint demo content: auto-creates a Home page with all profile patterns and sets it as the static front page on WordPress Playground

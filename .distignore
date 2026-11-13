@@ -52,3 +52,6 @@ Thumbs.db
 *.log
 *.sql
 *.sqlite
+
+# Developer notes
+styles/README.md

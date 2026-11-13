@@ -1,79 +1,51 @@
 <?php
 /**
- * Expertise Grid pattern.
+ * Title: Expertise Grid
+ * Slug: meridian/expertise-grid
+ * Categories: meridian-content
+ * Keywords: skills, services, expertise, grid, cards
+ * Description: Section heading followed by three cards describing areas of expertise.
  *
- * @package meridian
+ * @package Meridian
  */
 
-register_block_pattern(
-	'meridian/expertise-grid',
+$meridian_cards = array(
 	array(
-		'title'       => __( 'Expertise Grid', 'meridian' ),
-		'description' => __( 'A responsive grid of skill and expertise areas.', 'meridian' ),
-		'categories'  => array( 'mrdn-content' ),
-		'content'     => '<!-- wp:group {"className":"expertise-section","style":{"spacing":{"blockGap":"var:preset|spacing|8","padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"}}},"layout":{"type":"constrained"}} -->
-<div class="wp-block-group expertise-section">
-
-<!-- wp:heading {"level":2,"style":{"typography":{"fontWeight":"700"}},"fontSize":"3xl","textColor":"neutral-900"} -->
-<h2 class="wp-block-heading has-neutral-900-color has-text-color has-3-xl-font-size" style="font-weight:700">Areas of Expertise</h2>
-<!-- /wp:heading -->
-
-<!-- wp:separator {"style":{"color":{"background":"var:preset|color|primary"}},"className":"is-style-wide","style":{"layout":{"selfStretch":"fixed","flexSize":"60px"}}} -->
-<hr class="wp-block-separator has-text-color has-alpha-channel-opacity has-primary-background-color has-background is-style-wide" style="width:60px"/>
-<!-- /wp:separator -->
-
-<!-- wp:columns {"isStackedOnMobile":true,"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->
-<div class="wp-block-columns">
-
-<!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:group {"className":"expertise-card","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|3"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group expertise-card has-white-background-color has-background" style="border-radius:8px;border:1px solid var(--wp--preset--color--neutral-200)">
-<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"primary"} -->
-<h4 class="wp-block-heading has-primary-color has-text-color has-md-font-size" style="font-weight:600">Executive Leadership</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
-<p class="has-neutral-600-color has-text-color has-sm-font-size">Strategic planning, organizational design, cross-functional team leadership, and operational excellence for high-growth companies.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:group {"className":"expertise-card","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|3"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group expertise-card has-white-background-color has-background" style="border-radius:8px;border:1px solid var(--wp--preset--color--neutral-200)">
-<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"primary"} -->
-<h4 class="wp-block-heading has-primary-color has-text-color has-md-font-size" style="font-weight:600">Resilience Coaching</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
-<p class="has-neutral-600-color has-text-color has-sm-font-size">Building mental clarity, emotional intelligence, and sustainable habits that prevent burnout while maximizing peak performance.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:column -->
-
-<!-- wp:column -->
-<div class="wp-block-column">
-<!-- wp:group {"className":"expertise-card","style":{"border":{"radius":"8px","color":"var:preset|color|neutral-200","width":"1px","style":"solid"},"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|3"}},"backgroundColor":"white","layout":{"type":"flex","orientation":"vertical"}} -->
-<div class="wp-block-group expertise-card has-white-background-color has-background" style="border-radius:8px;border:1px solid var(--wp--preset--color--neutral-200)">
-<!-- wp:heading {"level":4,"style":{"typography":{"fontWeight":"600"}},"fontSize":"md","textColor":"primary"} -->
-<h4 class="wp-block-heading has-primary-color has-text-color has-md-font-size" style="font-weight:600">Product &amp; Delivery</h4>
-<!-- /wp:heading -->
-<!-- wp:paragraph {"fontSize":"sm","textColor":"neutral-600"} -->
-<p class="has-neutral-600-color has-text-color has-sm-font-size">End-to-end product development, agile delivery, and client account management across diverse industries with 100% on-time delivery track record.</p>
-<!-- /wp:paragraph -->
-</div>
-<!-- /wp:group -->
-</div>
-<!-- /wp:column -->
-
-</div>
-<!-- /wp:columns -->
-
-</div>
-<!-- /wp:group -->',
-	)
+		'title' => __( 'Executive Leadership', 'meridian' ),
+		'text'  => __( 'Strategic planning, organizational design and cross-functional team leadership for growing companies.', 'meridian' ),
+	),
+	array(
+		'title' => __( 'Resilience Coaching', 'meridian' ),
+		'text'  => __( 'Building clarity, emotional intelligence and sustainable habits that prevent burnout.', 'meridian' ),
+	),
+	array(
+		'title' => __( 'Product & Delivery', 'meridian' ),
+		'text'  => __( 'End-to-end product development, agile delivery and client account management.', 'meridian' ),
+	),
 );
+?>
+<!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|8","padding":{"top":"var:preset|spacing|12","bottom":"var:preset|spacing|12"}}},"layout":{"type":"constrained"}} -->
+<div class="wp-block-group" style="padding-top:var(--wp--preset--spacing--12);padding-bottom:var(--wp--preset--spacing--12)"><!-- wp:group {"style":{"spacing":{"blockGap":"var:preset|spacing|4"}},"layout":{"type":"flex","orientation":"vertical"}} -->
+<div class="wp-block-group"><!-- wp:heading -->
+<h2 class="wp-block-heading"><?php esc_html_e( 'Areas of Expertise', 'meridian' ); ?></h2>
+<!-- /wp:heading -->
+
+<!-- wp:separator {"className":"meridian-accent-rule","backgroundColor":"primary"} -->
+<hr class="wp-block-separator has-text-color has-primary-color has-alpha-channel-opacity has-primary-background-color has-background meridian-accent-rule"/>
+<!-- /wp:separator --></div>
+<!-- /wp:group -->
+
+<!-- wp:columns {"style":{"spacing":{"blockGap":{"top":"var:preset|spacing|6","left":"var:preset|spacing|6"}}}} -->
+<div class="wp-block-columns"><?php foreach ( $meridian_cards as $meridian_card ) : ?><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"className":"meridian-card","style":{"border":{"radius":"8px","width":"1px"},"spacing":{"padding":{"top":"var:preset|spacing|6","bottom":"var:preset|spacing|6","left":"var:preset|spacing|6","right":"var:preset|spacing|6"},"blockGap":"var:preset|spacing|3"},"dimensions":{"minHeight":"100%"}},"backgroundColor":"white","borderColor":"neutral-200","layout":{"type":"flex","orientation":"vertical","verticalAlignment":"top"}} -->
+<div class="wp-block-group meridian-card has-border-color has-neutral-200-border-color has-white-background-color has-background" style="border-width:1px;border-radius:8px;min-height:100%;padding-top:var(--wp--preset--spacing--6);padding-right:var(--wp--preset--spacing--6);padding-bottom:var(--wp--preset--spacing--6);padding-left:var(--wp--preset--spacing--6)"><!-- wp:heading {"level":3,"textColor":"primary","fontSize":"md"} -->
+<h3 class="wp-block-heading has-primary-color has-text-color has-md-font-size"><?php echo esc_html( $meridian_card['title'] ); ?></h3>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph {"textColor":"neutral-600","fontSize":"sm"} -->
+<p class="has-neutral-600-color has-text-color has-sm-font-size"><?php echo esc_html( $meridian_card['text'] ); ?></p>
+<!-- /wp:paragraph --></div>
+<!-- /wp:group --></div>
+<!-- /wp:column --><?php endforeach; ?></div>
+<!-- /wp:columns --></div>
+<!-- /wp:group -->
